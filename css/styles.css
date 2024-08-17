@@ -13,11 +13,6 @@ body {
     line-height: 1.6;
 }
 
-/* Esconde o conteúdo até que a página esteja carregada */
-#content {
-    visibility: hidden;
-}
-
 
 header {
     text-align: center;
@@ -94,8 +89,14 @@ nav ul li a:hover::after {
 }
 
 .profile h1 {
-    font-size: 2.5em;
+    font-family: 'Press Start 2P', cursive;
+    transform: scaleX(.85);
+    transform: scaleY(1.25);
+    padding: 20px;
+    font-size: 2em;
     margin: 10px 0;
+    white-space: nowrap; /* Garante que o texto não quebre linha durante a digitação */
+    overflow: hidden; /* Esconde o texto se ele exceder a largura */
 }
 
 #about p, h2{
@@ -114,7 +115,7 @@ nav ul li a:hover::after {
 }
 
 .profile{
-    background-color: #6969695f;
+    background-color: #6e4d7f79;
     border-radius: 15px;
     padding: 80px ;
     max-width: 600px;
@@ -414,6 +415,6 @@ footer {
     /* Inicialmente invisível */
     visibility: hidden;
     /* Para garantir que o conteúdo não apareça antes do carregamento */
-    animation: fadeIn 1s ease-in-out backwards;
+    animation: fadeIn 1s ease-in backwards;
     /* Animação de fade-in */
 }
