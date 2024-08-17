@@ -98,6 +98,21 @@ nav ul li a:hover::after {
     margin: 10px 0;
 }
 
+#about p, h2{
+    font-family: 'Press Start 2P', cursive;
+        transform: scaleX(.9);
+        /* 0.9 comprime a largura em 10%, ajuste conforme necessário */
+        /* Ajuste para melhorar a compactação */
+        transform: scaleY(1.25);
+        /* 1.15  */
+        /* Ajuste para melhorar a compactação */
+        padding: 40px;
+}
+
+#about h2{
+   margin-top: -50px;
+}
+
 .profile{
     background-color: #6969695f;
     border-radius: 15px;
@@ -115,8 +130,15 @@ nav ul li a:hover::after {
 
 
 .profile p {
-    font-size: 1.2em;
-    margin: 20px 0;
+    font-family: 'Press Start 2P', cursive;
+    transform: scaleX(0.85);
+        /* 0.9 comprime a largura em 10%, ajuste conforme necessário */
+        /* Ajuste para melhorar a compactação */
+    transform: scaleY(1.15);
+        /* 1.15  */
+        /* Ajuste para melhorar a compactação */
+    font-size: 1em;
+    margin: 40px 0;
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
