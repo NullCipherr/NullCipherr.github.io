@@ -3,7 +3,7 @@ html {
 }
 
 body {
-    background: url('https://api.wallpapers.ai/static/downloads/a380e19aa265409882662652a615e107/upscaled/000000_855887558_kdpmpp2m15_PS7.5_PC_background._gere_um_wallpaper_na_pegada_hacking_e_estilo_geek_._Digital_art._Concept_art_[upscaled].jpg') no-repeat center center fixed;
+    background: url('/I_Background.jpg') no-repeat center center fixed;
     background-size: cover;
     margin: 0;
     padding: 0;
