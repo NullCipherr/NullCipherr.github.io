@@ -1,6 +1,6 @@
 window.onload = function() {
     const h1Element = document.querySelector('.profile h1');
-    const text = " > Andrei Costa";
+    const text = "> Andrei Costa";
     // Simula o carregamento da página com um atraso artificial
     setTimeout(function() {
         // Remove o overlay de carregamento
@@ -12,6 +12,7 @@ window.onload = function() {
         content.style.visibility = 'visible';
         content.style.transition = 'opacity 1s ease-in-out';
         typeWriter(h1Element, text, 100);
+        startTypingAnimations();
         
     }, 2000); // Atraso de 2 segundos
 };
@@ -37,8 +38,29 @@ function typeWriter(element, text, delay = 100) {
             element.innerHTML += text.charAt(i);
             i++;
             setTimeout(type, delay);
+        } else {
+            // Adiciona uma classe que ativará o cursor piscando
+            element.classList.add('blinking-cursor');
         }
     }
     element.innerHTML = ""; // Limpa o texto antes de começar a digitação
     type();
+}
+
+function startTypingAnimations() {
+    const animations = [
+        { selector: '#about h2', text: '> About', delay: 100 },
+        { selector: '#projects h2', text: 'Featured Projects', delay: 100 },
+        { selector: '#resume h2', text: 'Resume', delay: 100 },
+        { selector: '#contact h2', text: 'Contact', delay: 100 },
+    ];
+
+    animations.forEach((anim, index) => {
+        const element = document.querySelector(anim.selector);
+        if (element) {
+            setTimeout(() => {
+                typeWriter(element, anim.text, anim.delay);
+            }, 1000 * index); // Atraso para iniciar cada animação em sequência
+        }
+    });
 }

@@ -88,15 +88,34 @@ nav ul li a:hover::after {
     margin-top: -125px;
 }
 
-.profile h1 {
+.profile h1,
+#about h2,
+#projects h2,
+#resume h2,
+#contact h2 {
     font-family: 'Press Start 2P', cursive;
-    transform: scaleX(.85);
     transform: scaleY(1.25);
-    padding: 20px;
-    font-size: 2em;
-    margin: 10px 0;
-    white-space: nowrap; /* Garante que o texto não quebre linha durante a digitação */
-    overflow: hidden; /* Esconde o texto se ele exceder a largura */
+    padding: 5px;
+    font-size: 1.6em;
+    margin: 20px 0;
+    white-space: wrap;
+    overflow: hidden;
+    position: relative;
+}
+
+.blinking-cursor::after {
+    content: '_';
+    /* Caracter underline */
+    animation: blink 1s step-end infinite;
+    position: absolute;
+    /* Ajuste conforme necessário */
+}
+
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
 }
 
 #about p, h2{
@@ -107,7 +126,7 @@ nav ul li a:hover::after {
         transform: scaleY(1.25);
         /* 1.15  */
         /* Ajuste para melhorar a compactação */
-        padding: 40px;
+        padding: 70px;
 }
 
 #about h2{
