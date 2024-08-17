@@ -1,8 +1,9 @@
 body {
+    background: url('https://images6.alphacoders.com/345/345848.jpg') no-repeat center center fixed;
+    background-size: cover;
     margin: 0;
     padding: 0;
     font-family: '', sans-serif;
-    background-color: #1b1b32;
     color: #fff;
     line-height: 1.6;
 }
@@ -13,7 +14,7 @@ header {
 }
 
 nav {
-    background-color: #31313147;
+    background-color: #6969695f;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(7px);
     border-radius: 15px;
@@ -40,7 +41,7 @@ nav ul li a::after {
     position: absolute;
     width: 0%;
     height: 2px;
-    background-color: #3b82f6;
+    background-color: #ff6b6b;
     /* Cor da linha de destaque */
     left: 50%;
     bottom: 0;
@@ -48,7 +49,7 @@ nav ul li a::after {
 }
 
 nav ul li a:hover {
-    color: #3b82f6;
+    color: #ff6b6b;
     /* Cor do texto ao passar o mouse */
 }
 
@@ -65,6 +66,10 @@ nav ul li a:hover::after {
     font-weight: bold;
     border-radius: 5px;
     cursor: pointer;
+}
+
+.hire-me:hover {
+    background-color: #aeaeae;
 }
 
 .profile img {
@@ -89,7 +94,7 @@ nav ul li a:hover::after {
 
 .profile .btn {
     display: inline-block;
-    background-color: #3b82f6;
+    background-color: #ff6b6b;
     padding: 10px 20px;
     color: #fff;
     text-decoration: none;
@@ -97,8 +102,12 @@ nav ul li a:hover::after {
     margin-top: 20px;
 }
 
+.btn:hover {
+    background-color: #aeaeae;
+}
+
 .profile-container {
-    background-color: #29293d;
+    background-color: #6969695f;
     border-radius: 10px;
     padding: 20px ;
     max-width: 800px;
@@ -112,6 +121,37 @@ nav ul li a:hover::after {
     margin: 2rem auto;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(7px);
+}
+
+.resume-container{
+    background-color: #6969695f;
+    border-radius: 20px;
+    padding: 20px ;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+
+    top: 50%;
+    transform: translateY(15%);
+
+    margin: 2rem auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7px);
+}
+
+.button_resume{
+    background-color: #ff6b6b;
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.button_resume:hover {
+    background-color: #aeaeae;
 }
 
 section {

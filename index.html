@@ -11,91 +11,97 @@
 
 <body>
     <script src="/js/scripts.js"></script>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#blog">Blog</a></li>
-                <li><a href="#resume">Resume</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <button class="hire-me" onclick="sendEmail()">Hire me</button>
-        </nav>
-        <div class="profile">
-            <div class="profile-container">
-                <img src="https://avatars.githubusercontent.com/u/141879308?v=4" alt="Foto de Andrei Costa">
-                <h1>Andrei Costa</h1>
-                <p>Hi, my name is Andrei, I am a young technology and knowledge enthusiast. I am currently studying the last year of the
-                computer science course at UEM, in Maringá, Paraná, Brazil.</p>
-                <a href="#resume" class="btn">View Resume</a>
+    <div class = "container animated fadeInUp">
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#resume">Resume</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <button class="hire-me" onclick="sendEmail()">Hire me</button>
+            </nav>
+            <div class="profile">
+                <div class="profile-container">
+                    <img src="https://avatars.githubusercontent.com/u/141879308?v=4" alt="Foto de Andrei Costa">
+                    <h1>Andrei Costa</h1>
+                    <p>Hi, my name is Andrei, I am a young technology and knowledge enthusiast. I am currently studying the last year of the
+                    computer science course at UEM, in Maringá, Paraná, Brazil.</p>
+                    <a href="#resume" class="btn">View Resume</a>
+                </div>
             </div>
-        </div>
-    </header>
+        </header>
 
-    <div class="profile-container-about">
-        <section id="about">
-            <h2>About</h2>
-            <p> I started my journey as a 3D game level designer in a startup, when I was 17 years old, I quickly evolved and worked in
-            other areas as I evolved, from Texture Designer, until I reached
-            working as a mechanics programmer in third-person games. That same year I entered the Computer Science faculty at the
-            State University of Maringá (UEM),
-            which I had the pleasure of studying different areas within computing, which has always been my great passion, some of
-            which include: Theory of computing, Algorithm complexity analysis,
-            Software development, Computer networks, Artificial intelligence, Machine Learning, Cryptography, among countless other
-            areas.</p>
-            <p>I'm an unreal developer with more than 6 years of experience in developing games and systems using computer graphics.
-                I'm currently in my last year of college, and I'm working mainly with systems focusing on Psychology, which
-                involves the use of the area of ​​machine learning and artificial intelligence.</p>
+        <div class="profile-container-about">
+            <section id="about">
+                <h2>About</h2>
+                <p> I started my journey as a 3D game level designer in a startup, when I was 17 years old, I quickly evolved and worked in
+                other areas as I evolved, from Texture Designer, until I reached
+                working as a mechanics programmer in third-person games. That same year I entered the Computer Science faculty at the
+                State University of Maringá (UEM),
+                which I had the pleasure of studying different areas within computing, which has always been my great passion, some of
+                which include: Theory of computing, Algorithm complexity analysis,
+                Software development, Computer networks, Artificial intelligence, Machine Learning, Cryptography, among countless other
+                areas.</p>
+                <p>I'm an unreal developer with more than 6 years of experience in developing games and systems using computer graphics.
+                    I'm currently in my last year of college, and I'm working mainly with systems focusing on Psychology, which
+                    involves the use of the area of ​​machine learning and artificial intelligence.</p>
+            </section>
+        </div>
+        <section id="projects" class="featured-projects">
+            <h2>Featured Projects</h2>
+            <p>Brief intro goes here. My main experience lies in building lorem ipsum dolor sit amet...</p>
+            <div class="project-grid">
+                <div class="project"></div>
+                <div class="project"></div>
+                <div class="project"></div>
+            </div>
         </section>
+        
+        <section id="blog">
+            <h2>Blog</h2>
+            <div class="blog-posts">
+                <article class="post">
+                    <h3>Título do Post 1</h3>
+                    <p>Resumo do post 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+                    <a href="#" class="read-more">Read More</a>
+                </article>
+                <article class="post">
+                    <h3>Título do Post 2</h3>
+                    <p>Resumo do post 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+                    <a href="#" class="read-more">Read More</a>
+                </article>
+            </div>
+        </section>
+        
+        <div class="resume-container">
+            <section id="resume">
+                <h2>Resume</h2>
+                <p>Baixe meu currículo para conhecer mais sobre minha experiência e habilidades.</p>
+                <button class="button_resume" onclick="downloadResume()">Download</button>
+            </section>
+        </div>
+        
+        <div class="resume-container">
+            <section id="contact">
+                <h2>Contact</h2>
+                <p>Se você deseja entrar em contato comigo, pode me encontrar nas redes sociais ou enviar um email clicando nos
+                    ícones abaixo.</p>
+                <div class="social-links">
+                    <a href="https://github.com/NullCipherr" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
+                    <a href="mailto:seu-email@example.com" target="_blank" class="social-icon"><i class="fas fa-envelope"></i></a>
+                    <a href="https://www.linkedin.com/in/seu-usuario" target="_blank" class="social-icon"><i
+                            class="fab fa-linkedin"></i></a>
+                </div>
+            </section>
+        </div>
+        
+        <footer>
+            <p>&copy; 2024 Andrei Costa. Todos os direitos reservados.</p>
+        </footer>
     </div>
-    <section id="projects" class="featured-projects">
-        <h2>Featured Projects</h2>
-        <p>Brief intro goes here. My main experience lies in building lorem ipsum dolor sit amet...</p>
-        <div class="project-grid">
-            <div class="project"></div>
-            <div class="project"></div>
-            <div class="project"></div>
-        </div>
-    </section>
-    
-    <section id="blog">
-        <h2>Blog</h2>
-        <div class="blog-posts">
-            <article class="post">
-                <h3>Título do Post 1</h3>
-                <p>Resumo do post 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
-                <a href="#" class="read-more">Read More</a>
-            </article>
-            <article class="post">
-                <h3>Título do Post 2</h3>
-                <p>Resumo do post 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
-                <a href="#" class="read-more">Read More</a>
-            </article>
-        </div>
-    </section>
-    
-    <section id="resume">
-        <h2>Resume</h2>
-        <p>Baixe meu currículo para conhecer mais sobre minha experiência e habilidades.</p>
-        <a href="#" class="btn">Download Resume</a>
-    </section>
-    
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Se você deseja entrar em contato comigo, pode me encontrar nas redes sociais ou enviar um email clicando nos
-            ícones abaixo.</p>
-        <div class="social-links">
-            <a href="https://github.com/NullCipherr" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
-            <a href="mailto:seu-email@example.com" target="_blank" class="social-icon"><i class="fas fa-envelope"></i></a>
-            <a href="https://www.linkedin.com/in/seu-usuario" target="_blank" class="social-icon"><i
-                    class="fab fa-linkedin"></i></a>
-        </div>
-    </section>
-    
-    <footer>
-        <p>&copy; 2024 Andrei Costa. Todos os direitos reservados.</p>
-    </footer>
 
 </body>
 

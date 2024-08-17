@@ -7,3 +7,7 @@ function sendEmail() {
 
     window.location.href = mailtoLink;
 }
+
+function downloadResume() {
+    window.location.href = '/files/curriculo.pdf';
+}
