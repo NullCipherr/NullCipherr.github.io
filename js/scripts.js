@@ -64,3 +64,37 @@ function startTypingAnimations() {
         }
     });
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('nav ul li a').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            const targetId = this.getAttribute('href').substring(1); // Obtém o ID da seção
+            const targetElement = document.getElementById(targetId);
+            const startPosition = window.pageYOffset; // Posição atual da rolagem
+            const targetPosition = targetElement.offsetTop; // Posição do alvo
+            const distance = targetPosition - startPosition; // Distância total a rolar
+            const duration = 1750; // Duração da rolagem em milissegundos
+            let startTime = null;
+
+            function scrollAnimation(currentTime) {
+                if (startTime === null) startTime = currentTime;
+                const timeElapsed = currentTime - startTime;
+                const progress = Math.min(timeElapsed / duration, 1); // Calcula o progresso da rolagem
+                const ease = easeInOutQuad(progress); // Função de easing para suavizar a rolagem
+                window.scrollTo(0, startPosition + (distance * ease));
+                
+                if (timeElapsed < duration) {
+                    requestAnimationFrame(scrollAnimation);
+                }
+            }
+
+            function easeInOutQuad(t) {
+                return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
+            }
+
+            requestAnimationFrame(scrollAnimation);
+        });
+    });
+});

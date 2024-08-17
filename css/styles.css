@@ -1,7 +1,3 @@
-html {
-    scroll-behavior: smooth;
-}
-
 /* Estilo para o corpo da página */
 body {
     background: url('/I_Background.jpg') no-repeat center center fixed;
@@ -95,9 +91,9 @@ nav ul li a:hover::after {
 #contact h2 {
     font-family: 'Press Start 2P', cursive;
     transform: scaleY(1.25);
-    padding: 5px;
+    padding: 10px;
     font-size: 1.6em;
-    margin: 20px 0;
+    margin: 2px 0;
     white-space: wrap;
     overflow: hidden;
     position: relative;
@@ -127,10 +123,6 @@ nav ul li a:hover::after {
         /* 1.15  */
         /* Ajuste para melhorar a compactação */
         padding: 70px;
-}
-
-#about h2{
-   margin-top: -50px;
 }
 
 .profile{
@@ -223,17 +215,14 @@ nav ul li a:hover::after {
 }
 
 .resume-container{
-    background-color: #6969695f;
-    border-radius: 20px;
+    background-color: #445b8dea;
+    border-radius: 15px;
     padding: 20px ;
     max-width: 800px;
     margin: 0 auto;
     text-align: center;
     position: relative;
-
     margin: 3rem auto;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(7px);
 }
 
 .button_resume{
@@ -265,6 +254,26 @@ section h2 {
     margin-top: 0px;
     color: rgb(58, 201, 201); 
     font-weight: bolder;
+}
+
+.resume-container::after,
+.resume-container::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: conic-gradient(from var(--angle), #ff6b6b, #3b82f6, #ff6b6b);
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    padding: 3px;
+    border-radius: 15px;
+    animation: 3s spin linear infinite;
+}
+
+.resume-container::before {
+    filter: blur(1.5rem);
 }
 
 section p {
@@ -342,7 +351,7 @@ form button {
 footer {
     text-align: center;
     padding: 1px;
-    background-color: #111111af;
+    background-color: #445b8d64;
     color: #fff;
     margin-top: 50px;
 }
