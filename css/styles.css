@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background: url('https://images6.alphacoders.com/345/345848.jpg') no-repeat center center fixed;
     background-size: cover;
@@ -12,6 +16,7 @@ header {
     text-align: center;
     padding: 20px;
 }
+
 
 nav {
     background-color: #6969695f;
@@ -111,7 +116,7 @@ nav ul li a:hover::after {
 .profile-container {
     background-color: #6969695f;
     border-radius: 10px;
-    padding: 20px ;
+    padding: 30px ;
     max-width: 800px;
     margin: 0 auto;
     text-align: center;
@@ -120,9 +125,9 @@ nav ul li a:hover::after {
     top: 50%;
     transform: translateY(15%);
 
-    margin: 2rem auto;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(7px);
+    margin: 1.5rem auto;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
 }
 
 .resume-container{
@@ -166,6 +171,8 @@ section h2 {
 .h2_s{
     font-size: 2em;
     margin-top: 0px;
+    color: rgb(58, 201, 201); 
+    font-weight: bolder;
 }
 
 section p {
@@ -177,6 +184,21 @@ section p {
     display: flex;
     gap: 20px;
     justify-content: center;
+    height: 200px;
+}
+
+.featured-projects{
+    background-color: #6969695f;
+    border-radius: 20px;
+    padding: 20px ;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+
+    margin: 10rem auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7px);
 }
 
 .featured-projects .project {
@@ -186,18 +208,6 @@ section p {
     border-radius: 10px;
 }
 
-.blog-posts {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.post {
-    background-color: #29293d;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: left;
-}
 
 .post h3 {
     margin-top: 0;

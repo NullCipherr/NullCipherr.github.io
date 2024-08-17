@@ -11,3 +11,4 @@ function sendEmail() {
 function downloadResume() {
     window.location.href = '/files/curriculo.pdf';
 }
+
