@@ -84,6 +84,8 @@ nav ul li a:hover::after {
     margin: 10px 0;
 }
 
+
+
 .profile p {
     font-size: 1.2em;
     margin: 10px 0;
@@ -132,10 +134,7 @@ nav ul li a:hover::after {
     text-align: center;
     position: relative;
 
-    top: 50%;
-    transform: translateY(15%);
-
-    margin: 2rem auto;
+    margin: 3rem auto;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(7px);
 }
@@ -162,6 +161,11 @@ section {
 section h2 {
     font-size: 2em;
     margin-bottom: 20px;
+}
+
+.h2_s{
+    font-size: 2em;
+    margin-top: 0px;
 }
 
 section p {
@@ -224,7 +228,7 @@ form textarea {
 }
 
 form button {
-    background-color: #3b82f6;
+    background-color: #ff6b6b;
     border: none;
     padding: 10px 20px;
     color: #fff;
@@ -250,13 +254,13 @@ footer {
 
 .social-icon {
     font-size: 1.5em;
-    color: #fff;
+    color: #ff6b6b;
     text-decoration: none;
     transition: color 0.15s;
 }
 
 .social-icon:hover {
-    color: #3b82f6;
+    color: #aeaeae;
     /* Cor de destaque ao passar o mouse */
 }
 
