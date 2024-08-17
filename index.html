@@ -11,79 +11,86 @@
 
 <body>
     <script src="/js/scripts.js"></script>
-    <div class = "container animated fadeInUp">
-        <header>
-            <nav>
-                <ul>
-                    <li><a href="#about"><i class="fas fa-user"></i> About</a></li>
-                    <li><a href="#projects"><i class="fas fa-briefcase"></i> Projects</a></li>
-                    <li><a href="#resume"><i class="fas fa-file-alt"></i> Resume</a></li>
-                    <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
-                </ul>
-                <button class="hire-me" onclick="sendEmail()">Hire me</button>
-            </nav>
-            <div class="profile">
-                <div class="profile-container">
-                    <img src="https://avatars.githubusercontent.com/u/141879308?v=4" alt="Foto de Andrei Costa">
-                    <h1 style="color: rgb(77, 148, 254);">Andrei Costa</h1>
-                    <p>Hi, my name is Andrei, I am a young technology and knowledge enthusiast. I am currently studying the last year of the
-                    computer science course at UEM, in Maringá, Paraná, Brazil.</p>
+    
+    <div id ="loading-overlay">
+        <div class ="spinner"></div>
+    </div>
+    
+    <div id = "content">
+        <div class = "container animated fadeInUp">
+            <header>
+                <nav>
+                    <ul>
+                        <li><a href="#about"><i class="fas fa-user"></i> About</a></li>
+                        <li><a href="#projects"><i class="fas fa-briefcase"></i> Projects</a></li>
+                        <li><a href="#resume"><i class="fas fa-file-alt"></i> Resume</a></li>
+                        <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+                    </ul>
+                    <button class="hire-me" onclick="sendEmail()">Hire me</button>
+                </nav>
+                <div class="profile">
+                    <div class="profile-container">
+                        <img src="https://avatars.githubusercontent.com/u/141879308?v=4" alt="Foto de Andrei Costa">
+                        <h1 style="color: rgb(77, 148, 254);">Andrei Costa</h1>
+                        <p>Hi, my name is Andrei, I am a young technology and knowledge enthusiast. I am currently studying the last year of the
+                        computer science course at UEM, in Maringá, Paraná, Brazil.</p>
+                    </div>
                 </div>
-            </div>
-        </header>
+            </header>
 
-        <div class="profile-container">
-            <section id="about">
-                <h2 style="color: rgb(58, 201, 201); font-weight: bolder;">About</h2>
-                <p> I started my journey as a 3D game level designer in a startup, when I was 17 years old, I quickly evolved and worked in
-                other areas as I evolved, from Texture Designer, until I reached
-                working as a mechanics programmer in third-person games. That same year I entered the Computer Science faculty at the
-                State University of Maringá (UEM),
-                which I had the pleasure of studying different areas within computing, which has always been my great passion, some of
-                which include: Theory of computing, Algorithm complexity analysis,
-                Software development, Computer networks, Artificial intelligence, Machine Learning, Cryptography, among countless other
-                areas.</p>
-                <p>I'm an unreal developer with more than 6 years of experience in developing games and systems using computer graphics.
-                    I'm currently in my last year of college, and I'm working mainly with systems focusing on Psychology, which
-                    involves the use of the area of ​​machine learning and artificial intelligence.</p>
-            </section>
-        </div>
-        
-        <section id="projects" class="featured-projects">
-            <h2 style="color: rgb(58, 201, 201); font-weight: bolder;">Featured Projects</h2>
-            <p>Brief intro goes here. My main experience lies in building lorem ipsum dolor sit amet...</p>
-            <div class="project-grid">
-                <div class="project"></div>
-                <div class="project"></div>
-                <div class="project"></div>
+            <div class="profile-container">
+                <section id="about">
+                    <h2 style="color: rgb(58, 201, 201); font-weight: bolder;">About</h2>
+                    <p> I started my journey as a 3D game level designer in a startup, when I was 17 years old, I quickly evolved and worked in
+                    other areas as I evolved, from Texture Designer, until I reached
+                    working as a mechanics programmer in third-person games. That same year I entered the Computer Science faculty at the
+                    State University of Maringá (UEM),
+                    which I had the pleasure of studying different areas within computing, which has always been my great passion, some of
+                    which include: Theory of computing, Algorithm complexity analysis,
+                    Software development, Computer networks, Artificial intelligence, Machine Learning, Cryptography, among countless other
+                    areas.</p>
+                    <p>I'm an unreal developer with more than 6 years of experience in developing games and systems using computer graphics.
+                        I'm currently in my last year of college, and I'm working mainly with systems focusing on Psychology, which
+                        involves the use of the area of ​​machine learning and artificial intelligence.</p>
+                </section>
             </div>
-        </section>
-        
-        <div class="resume-container">
-            <section id="resume">
-                <h2 class="h2_s">Resume</h2>
-                <p>Baixe meu currículo para conhecer mais sobre minha experiência e habilidades.</p>
-                <button class="button_resume" onclick="downloadResume()">Download</button>
-            </section>
-        </div>
-        
-        <div class="resume-container">
-            <section id="contact">
-                <h2 class="h2_s">Contact</h2>
-                <p>Se você deseja entrar em contato comigo, pode me encontrar nas redes sociais ou enviar um email clicando nos
-                    ícones abaixo.</p>
-                <div class="social-links">
-                    <a href="https://github.com/NullCipherr" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
-                    <a href="mailto:seu-email@example.com" target="_blank" class="social-icon"><i class="fas fa-envelope"></i></a>
-                    <a href="https://www.linkedin.com/in/seu-usuario" target="_blank" class="social-icon"><i
-                            class="fab fa-linkedin"></i></a>
+            
+            <section id="projects" class="featured-projects">
+                <h2 style="color: rgb(58, 201, 201); font-weight: bolder;">Featured Projects</h2>
+                <p>Brief intro goes here. My main experience lies in building lorem ipsum dolor sit amet...</p>
+                <div class="project-grid">
+                    <div class="project"></div>
+                    <div class="project"></div>
+                    <div class="project"></div>
                 </div>
             </section>
+            
+            <div class="resume-container">
+                <section id="resume">
+                    <h2 class="h2_s">Resume</h2>
+                    <p>Baixe meu currículo para conhecer mais sobre minha experiência e habilidades.</p>
+                    <button class="button_resume" onclick="downloadResume()">Download</button>
+                </section>
+            </div>
+            
+            <div class="resume-container">
+                <section id="contact">
+                    <h2 class="h2_s">Contact</h2>
+                    <p>Se você deseja entrar em contato comigo, pode me encontrar nas redes sociais ou enviar um email clicando nos
+                        ícones abaixo.</p>
+                    <div class="social-links">
+                        <a href="https://github.com/NullCipherr" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
+                        <a href="mailto:seu-email@example.com" target="_blank" class="social-icon"><i class="fas fa-envelope"></i></a>
+                        <a href="https://www.linkedin.com/in/seu-usuario" target="_blank" class="social-icon"><i
+                                class="fab fa-linkedin"></i></a>
+                    </div>
+                </section>
+            </div>
+            
+            <footer>
+                <p>&copy; 2024 Andrei Costa. Todos os direitos reservados.</p>
+            </footer>
         </div>
-        
-        <footer>
-            <p>&copy; 2024 Andrei Costa. Todos os direitos reservados.</p>
-        </footer>
     </div>
 
 </body>
