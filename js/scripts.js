@@ -13,6 +13,7 @@ window.onload = function() {
         content.style.transition = 'opacity 1s ease-in-out';
         typeWriter(h1Element, text, 100);
         startTypingAnimations();
+        window.scrollTo(0, 0); // Volta a página para o topo
         
     }, 2000); // Atraso de 2 segundos
 };
@@ -50,9 +51,9 @@ function typeWriter(element, text, delay = 100) {
 function startTypingAnimations() {
     const animations = [
         { selector: '#about h2', text: '> About', delay: 100 },
-        { selector: '#projects h2', text: 'Featured Projects', delay: 100 },
-        { selector: '#resume h2', text: 'Resume', delay: 100 },
-        { selector: '#contact h2', text: 'Contact', delay: 100 },
+        { selector: '#projects h2', text: '> Featured Projects', delay: 100 },
+        { selector: '#resume h2', text: '> Resume', delay: 100 },
+        { selector: '#contact h2', text: '> Contact', delay: 100 },
     ];
 
     animations.forEach((anim, index) => {
@@ -70,23 +71,29 @@ document.addEventListener('DOMContentLoaded', function() {
         anchor.addEventListener('click', function(e) {
             e.preventDefault();
             
-            const targetId = this.getAttribute('href').substring(1); // Obtém o ID da seção
+            const targetId = this.getAttribute('href').substring(1); 
             const targetElement = document.getElementById(targetId);
-            const startPosition = window.pageYOffset; // Posição atual da rolagem
-            const targetPosition = targetElement.offsetTop; // Posição do alvo
-            const distance = targetPosition - startPosition; // Distância total a rolar
-            const duration = 1750; // Duração da rolagem em milissegundos
+            const startPosition = window.pageYOffset; 
+            const targetPosition = targetElement.offsetTop; 
+            const distance = targetPosition - startPosition; 
+            const duration = 1750; 
             let startTime = null;
 
             function scrollAnimation(currentTime) {
                 if (startTime === null) startTime = currentTime;
                 const timeElapsed = currentTime - startTime;
-                const progress = Math.min(timeElapsed / duration, 1); // Calcula o progresso da rolagem
-                const ease = easeInOutQuad(progress); // Função de easing para suavizar a rolagem
+                const progress = Math.min(timeElapsed / duration, 1); 
+                const ease = easeInOutQuad(progress); 
                 window.scrollTo(0, startPosition + (distance * ease));
-                
+
                 if (timeElapsed < duration) {
                     requestAnimationFrame(scrollAnimation);
+                } else {
+                    // Inicia a animação de digitação quando a rolagem atingir a seção
+                    const h2Element = targetElement.querySelector('h2');
+                    if (h2Element) {
+                        typeWriter(h2Element, h2Element.textContent.trim(), 100);
+                    }
                 }
             }
 
