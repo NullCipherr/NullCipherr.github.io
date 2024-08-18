@@ -160,13 +160,18 @@ nav ul li a:hover::after {
 
 #about p, h2{
     font-family: 'Press Start 2P', cursive;
-        transform: scaleX(.9);
+    transform: scaleX(0.5);
         /* 0.9 comprime a largura em 10%, ajuste conforme necessário */
         /* Ajuste para melhorar a compactação */
-        transform: scaleY(1.25);
+    transform: scaleY(1.25);
         /* 1.15  */
         /* Ajuste para melhorar a compactação */
-        padding: 70px;
+    padding: 70px;
+}
+
+#about p{
+    text-indent: 50px;
+    text-align: justify;
 }
 
 .profile{
