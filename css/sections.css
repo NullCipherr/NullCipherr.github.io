@@ -1,0 +1,48 @@
+/* sections.css */
+section {
+    padding: 40px ;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+#about p,
+h2 {
+    font-size: large;
+}
+
+#about p {
+    text-align: center;
+
+}
+
+#about h2{
+    font-size: 50px;
+    margin-top: -5px;
+}
+
+#projects h2 {
+    font-size: 50px;
+    margin-top: -5px;
+}
+
+#resume h2 {
+    color: rgb(227, 101, 84);
+    font-size: 40px;
+    margin-top: 5px;
+}
+
+#resume p{
+    text-align: left;
+    text-indent: 50px;
+    padding: 0px 20px;
+}
+
+#contact h2 {
+    color: rgb(227, 101, 84);
+    font-size: 40px;
+    margin-top: -5px;
+}

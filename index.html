@@ -4,21 +4,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio de Andrei Costa</title>
-    <link rel="stylesheet" href="/css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap">
+    <title>Andrei Costa</title>
+
+    <!-- Loading Background Script -->
+    <link rel="stylesheet" href="css/loading-background.css">
+
+    <!-- Loading Overlay Styles -->
+    <link rel="stylesheet" href="css/loading-overlay.css">
+    
+    <!-- Global Styles -->
+    <link rel="stylesheet" href="css/global.css">
+    
+    <!-- Header and Navigation Styles -->
+    <link rel="stylesheet" href="css/header-nav.css">
+    
+    <!-- Containers Section Styles -->
+    <link rel="stylesheet" href="css/containers.css">
+    
+    <!-- Animations and Effects -->
+    <link rel="stylesheet" href="css/animations.css">
+    
+    <!-- Responsive Design -->
+    <link rel="stylesheet" href="css/responsive.css">
+    
+    <!-- Sections and Containers -->
+    <link rel="stylesheet" href="css/sections.css">
+    
+    <!-- Footer and Forms Styles -->
+    <link rel="stylesheet" href="css/footer-forms.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+
+    <!-- Favicon -->
+    <link rel="icon" href="https://avatars.githubusercontent.com/u/141879308?v=4" type="image/x-icon">
 </head>
 
 <body>
-    <script src="/js/scripts.js"></script>
-    
     <div id ="loading-overlay">
         <div class ="spinner"></div>
     </div>
-    
-    <div id = "content">
-        <div class = "container animated fadeInUp">
+
+    <div id = "content" class="background">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
             <header>
                 <nav>
                     <ul>
@@ -32,7 +87,7 @@
                 <div class="profile">
                     <div class="profile-container">
                         <img src="https://avatars.githubusercontent.com/u/141879308?v=4" alt="Foto de Andrei Costa">
-                        <h1 style="color: rgb(77, 148, 254);"></h1>
+                        <h1 style="color: rgb(227, 101, 84);"></h1>
                         <p>Hi everyone, my name is Andrei, I am a young technology and knowledge enthusiast. I am currently studying the last year of the
                         computer science course at UEM, in Maringá, Paraná, Brazil.</p>
                     </div>
@@ -41,7 +96,7 @@
 
             <section id="about">
                 <div class="profile-container">
-                    <h2 style="color: rgb(77, 148, 254); font-weight: bolder;"> > About </About></h2>
+                    <h2 style="color: rgb(227, 101, 84); font-weight: bolder;"> > About </About></h2>
                     <p> I started my journey as a 3D game level designer in a startup, when I was 17 years old, I quickly evolved and worked in
                     other areas as I evolved, from Texture Designer, until I reached
                     working as a mechanics programmer in third-person games. That same year I entered the Computer Science faculty at the
@@ -57,7 +112,7 @@
             </section>
             
             <section id="projects" class="featured-projects">
-                <h2 style="color: rgb(77, 148, 254); font-weight: bolder;">Featured Projects</h2>
+                <h2 style="color: rgb(227, 101, 84); font-weight: bolder;">Featured Projects</h2>
                 <p>Brief intro goes here. My main experience lies in building lorem ipsum dolor sit amet...</p>
                 <div class="project-grid">
                     <div class="project"></div>
@@ -69,21 +124,22 @@
             <section id="resume">
                 <div class="resume-container">
                     <h2 class="h2_s">Resume</h2>
-                    <p>Baixe meu currículo para conhecer mais sobre minha experiência e habilidades.</p>
+                    <p>Download my resume to learn more about my professional journey and the skills I have developed over the years. In it, I
+                    share the experiences that contributed to my growth and the skills that I have been improving with dedication. I hope
+                    this information can show you how I can be useful and contribute to the success of your team or project. I am available
+                    for any questions or opportunities for dialogue.</p>
                     <button class="button_resume" onclick="downloadResume()">Download</button>
                 </div>
             </section>
             
             <section id="contact">
-                <div class="resume-container">
+                <div class="contact-container">
                     <h2 class="h2_s">Contact</h2>
-                    <p>Se você deseja entrar em contato comigo, pode me encontrar nas redes sociais ou enviar um email clicando nos
-                        ícones abaixo.</p>
+                    <p>If you want to get in touch with me, you can find me on social media or send me an email by clicking on the icons below.</p>
                     <div class="social-links">
                         <a href="https://github.com/NullCipherr" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/seu-usuario" target="_blank" class="social-icon"><i class="fab fa-linkedin"></i></a>
                         <a href="mailto:seu-email@example.com" target="_blank" class="social-icon"><i class="fas fa-envelope"></i></a>
-                        <a href="https://www.linkedin.com/in/seu-usuario" target="_blank" class="social-icon"><i
-                                class="fab fa-linkedin"></i></a>
                     </div>
                 </div>
             </section>
@@ -93,6 +149,8 @@
             </footer>
         </div>
     </div>
+
+    <script src="/js/scripts.js"></script>
 
 </body>
 

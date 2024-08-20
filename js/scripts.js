@@ -1,6 +1,6 @@
 window.onload = function() {
     const h1Element = document.querySelector('.profile h1');
-    const text = "> Andrei Costa";
+    const text = "Andrei Costa";
     // Simula o carregamento da página com um atraso artificial
     setTimeout(function() {
         // Remove o overlay de carregamento
@@ -50,10 +50,10 @@ function typeWriter(element, text, delay = 100) {
 
 function startTypingAnimations() {
     const animations = [
-        { selector: '#about h2', text: '> About', delay: 100 },
-        { selector: '#projects h2', text: '> Featured Projects', delay: 100 },
-        { selector: '#resume h2', text: '> Resume', delay: 100 },
-        { selector: '#contact h2', text: '> Contact', delay: 100 },
+        { selector: '#about h2', text: 'About', delay: 100 },
+        { selector: '#projects h2', text: 'Featured Projects', delay: 100 },
+        { selector: '#resume h2', text: 'Resume', delay: 100 },
+        { selector: '#contact h2', text: 'Contact', delay: 100 },
     ];
 
     animations.forEach((anim, index) => {
@@ -65,43 +65,3 @@ function startTypingAnimations() {
         }
     });
 }
-
-document.addEventListener('DOMContentLoaded', function() {
-    document.querySelectorAll('nav ul li a').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            e.preventDefault();
-            
-            const targetId = this.getAttribute('href').substring(1); 
-            const targetElement = document.getElementById(targetId);
-            const startPosition = window.pageYOffset; 
-            const targetPosition = targetElement.offsetTop; 
-            const distance = targetPosition - startPosition; 
-            const duration = 1750; 
-            let startTime = null;
-
-            function scrollAnimation(currentTime) {
-                if (startTime === null) startTime = currentTime;
-                const timeElapsed = currentTime - startTime;
-                const progress = Math.min(timeElapsed / duration, 1); 
-                const ease = easeInOutQuad(progress); 
-                window.scrollTo(0, startPosition + (distance * ease));
-
-                if (timeElapsed < duration) {
-                    requestAnimationFrame(scrollAnimation);
-                } else {
-                    // Inicia a animação de digitação quando a rolagem atingir a seção
-                    const h2Element = targetElement.querySelector('h2');
-                    if (h2Element) {
-                        typeWriter(h2Element, h2Element.textContent.trim(), 100);
-                    }
-                }
-            }
-
-            function easeInOutQuad(t) {
-                return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
-            }
-
-            requestAnimationFrame(scrollAnimation);
-        });
-    });
-});

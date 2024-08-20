@@ -1,0 +1,52 @@
+/* responsive.css */
+@media (max-width: 768px) {
+    body {
+        background-position: top center;
+        background-size: cover;
+    }
+
+    .hire-me {
+        visibility: hidden;
+    }
+
+    nav {
+        position: fixed;
+        width: 94%;
+        z-index: 1000;
+        border-radius: 0;
+        padding: 10px 0;
+    }
+
+    nav ul {
+        flex-direction: row;
+        gap: 55px;
+    }
+
+    .profile img {
+        width: 80px;
+        height: 80px;
+        margin-top: -55px;
+    }
+
+    .profile,
+    .profile-container,
+    .resume-container,
+    .featured-projects {
+        text-align: center;
+        font-size: 10%;
+        padding: 20px;
+    }
+
+    .featured-projects .project-grid {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #about p {
+        text-align: left;
+        height: auto;
+        font-size: 4px;
+        margin-top: 75px;
+        width: 70%;
+    }
+}
