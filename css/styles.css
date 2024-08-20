@@ -29,54 +29,6 @@ header {
     padding: 15px;
 }
 
-/* Ajustando a posição da imagem e layout em telas menores */
-@media (max-width: 768px) {
-    body {
-        background-position: top center;
-        background-size: cover;
-    }
-
-    nav {
-        position: fixed;
-        top: 0;
-        width: 100%;
-        z-index: 1000;
-        border-radius: 0;
-        padding: 10px 0;
-    }
-
-    nav ul {
-        flex-direction: column;
-        gap: 20px;
-        padding: 0;
-    }
-
-    .profile img {
-        width: 80px;
-        height: 80px;
-        margin-top: -40px;
-    }
-
-    .profile,
-    .profile-container,
-    .resume-container,
-    .featured-projects {
-        max-width: 95%;
-        margin: 1rem auto;
-        padding: 20px;
-    }
-
-    .featured-projects .project-grid {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    #about p {
-        margin-top: 50px;
-        padding: 20px;
-    }
-}
-
 nav {
     position: relative;
     background-color: #6e4d7f8c;
@@ -221,7 +173,7 @@ nav ul li a:hover::after {
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
-    text-align: justify;
+    text-align: left;
     text-indent: 50px;
 }
 
@@ -246,7 +198,7 @@ nav ul li a:hover::after {
     text-align: center;
     position: relative;
     top: 50%;
-    margin: 1.rem auto;
+    margin: 1.5rem auto;
 }
 
 @property --angle {
@@ -531,4 +483,59 @@ footer {
     /* Para garantir que o conteúdo não apareça antes do carregamento */
     animation: fadeIn 1s ease-in backwards;
     /* Animação de fade-in */
+}
+
+
+/* Ajustando a posição da imagem e layout em telas menores */
+@media (max-width: 768px) {
+    body {
+        background-position: top center;
+        background-size: cover;
+    }
+
+    .hire-me{
+        visibility: hidden;
+    }
+
+    nav {
+        position: fixed;
+        width: 94%;
+        z-index: 1000;
+        border-radius: 0;
+        padding: 10px 0;
+    }
+
+    nav ul {
+        flex-direction: row;
+        gap: 55px;
+    }
+
+    .profile img {
+        width: 80px;
+        height: 80px;
+        margin-top: -55px;
+    }
+
+    .profile,
+    .profile-container,
+    .resume-container,
+    .featured-projects {
+        text-align: center;
+        font-size: 10%;
+        padding: 20px;
+    }
+
+    .featured-projects .project-grid {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #about p {
+        text-align: left;
+        height: auto;
+        font-size: 4px;
+        margin-top: 75px;
+        width: 70%;
+
+    }
 }
