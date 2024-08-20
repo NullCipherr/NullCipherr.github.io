@@ -1,4 +1,4 @@
-## ![Welcome GIF (https://media.giphy.com/media/l0HlQ7LRal7dOwN56/giphy.gif) NullCipherr.github.io
+<img src="https://media.giphy.com/media/l0HlQ7LRal7dOwN56/giphy.gif" alt="Welcome GIF">
 
 ### 🌟 Welcome to My Portfolio! 🌟
 
