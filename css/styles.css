@@ -1,6 +1,12 @@
+html {
+    height: 100%;
+}
+
+
 /* Estilo para o corpo da página */
 body {
-    background: url('/I_Background.jpg') no-repeat center center fixed;
+    height: 100%;
+    background: url('/src/Background/I_Background.jpg') no-repeat center center fixed;
     background-size: cover;
     margin: 0;
     padding: 0;
@@ -23,39 +29,51 @@ header {
     padding: 15px;
 }
 
+/* Ajustando a posição da imagem e layout em telas menores */
 @media (max-width: 768px) {
-
-    .hire-me {
-        visibility: hidden;
+    body {
+        background-position: top center;
+        background-size: cover;
     }
-    
+
+    nav {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+        border-radius: 0;
+        padding: 10px 0;
+    }
+
     nav ul {
-        flex-direction: row;
-        gap: 10px;
+        flex-direction: column;
+        gap: 20px;
+        padding: 0;
     }
 
-    #about p{
-        margin-top: 150px;
+    .profile img {
+        width: 80px;
+        height: 80px;
+        margin-top: -40px;
     }
 
     .profile,
     .profile-container,
     .resume-container,
     .featured-projects {
-        max-width: 90%;
+        max-width: 95%;
         margin: 1rem auto;
         padding: 20px;
     }
 
-    .profile img {
-        width: 100px;
-        height: 100px;
-        margin-top: -100px;
-    }
-
     .featured-projects .project-grid {
         flex-direction: column;
-        height: auto;
+        gap: 10px;
+    }
+
+    #about p {
+        margin-top: 50px;
+        padding: 20px;
     }
 }
 
@@ -203,6 +221,8 @@ nav ul li a:hover::after {
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
+    text-align: justify;
+    text-indent: 50px;
 }
 
 .profile .btn {
