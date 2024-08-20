@@ -1,6 +1,4 @@
-<p align="center">
-###  🌟 Welcome to My Portfolio! 🌟
-</p>
+# <p align="center">🌟 Welcome to My Portfolio! 🌟</p>
 
 <p align="center">
 <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExbWw0c2F0YjJhcmE1c2R3azlvaXg0cXA3MzE1OW9od204bnB2aHlpbyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/shy030IeNMQmc/giphy.webp" alt="Welcome GIF">
