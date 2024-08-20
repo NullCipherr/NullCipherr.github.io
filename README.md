@@ -1,8 +1,10 @@
+## ![Welcome GIF(https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExbWw0c2F0YjJhcmE1c2R3azlvaXg0cXA3MzE1OW9od204bnB2aHlpbyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/shy030IeNMQmc/giphy.webp)
+
 ### 🌟 Welcome to My Portfolio! 🌟
 
 Hello! I'm **Andrei**, a computer science enthusiast with a passion for exploring advanced topics in software development, machine learning, and parallel computing. Dive into my world of code and innovation! 💻
 
-#### 🔗 [Explore My Projects](#) | [Read My Blog](#) | [Contact Me](#)
+#### 🔗 [Explore My Projects](#) | [Read My Blog](#) | [Contact Me](mailto:andrei@example.com)
 
 ---
 
@@ -16,8 +18,6 @@ Hello! I'm **Andrei**, a computer science enthusiast with a passion for explorin
 
 ---
 
-Feel free to explore my projects, check out my blog posts, or [get in touch](#) through the contact form. I'm always open to new opportunities and collaborations!
+Feel free to explore my projects, check out my blog posts, or [get in touch](mailto:andrei@example.com) through the contact form. I'm always open to new opportunities and collaborations!
 
 ---
-
-The links above ("Explore My Projects," "Read My Blog," "Contact Me") can be set up with CSS animations to make them interactive. For example, you could use hover effects to change the color, underline the text, or add a slight zoom effect. Would you like to implement these animations, or do you need any other specific details?
