@@ -48,18 +48,3 @@ nav ul li a:hover::after {
     width: 100%;
     left: 0;
 }
-
-.hire-me {
-    background-color: #ff6b6b;
-    border: none;
-    padding: 10px 20px;
-    color: white;
-    font-weight: bold;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-right: 30px;
-}
-
-.hire-me:hover {
-    background-color: #aeaeae;
-}

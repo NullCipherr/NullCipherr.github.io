@@ -90,21 +90,6 @@
     margin: 10rem auto;
 }
 
-.button_resume {
-    background-color: #ff6b6b;
-    border: none;
-    padding: 15px 15px;
-    color: white;
-    font-weight: bold;
-    border-radius: 10px;
-    cursor: pointer;
-    margin: 20px;
-}
-
-.button_resume:hover {
-    background-color: #aeaeae;
-}
-
 /* Aplique a animação aos elementos necessários */
 .resume-container::after,
 .resume-container::before,

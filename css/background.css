@@ -5,19 +5,21 @@
 }
 
 .background {
+    display: flexbox;
     align-items: center;
     position: fixed;
     width: 100%;
     height: 100%;
     top: 0;
     left: 0;
-    background: linear-gradient(to right, #3b5c7d, #ffffff, #d08365);
-    overflow: scroll;
+    background: linear-gradient(to right, #1c2060, #ffffff, #d08365);
+    overflow: auto;
+    overflow-x: hidden;
 }
 
 .background span {
-    width: 10px;
-    height: 10px;
+    width: 15px;
+    height: 15px;
     border-radius: 50%;
     backface-visibility: hidden;
     position: absolute;
