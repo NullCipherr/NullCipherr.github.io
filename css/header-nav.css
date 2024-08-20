@@ -13,7 +13,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 3px;
+    padding: 4px;
 }
 
 nav ul {
@@ -34,7 +34,6 @@ nav ul li a::after {
     position: absolute;
     width: 0%;
     height: 2px;
-    background-color: #ff6b6b;
     left: 50%;
     bottom: 0;
     transition: width 0.3s, left 0.3s;
