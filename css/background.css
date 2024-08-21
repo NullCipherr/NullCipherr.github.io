@@ -5,7 +5,6 @@
 }
 
 .background {
-    display: flexbox;
     align-items: center;
     position: fixed;
     width: 100%;
@@ -13,8 +12,7 @@
     top: 0;
     left: 0;
     background: linear-gradient(to right, #44498b, #ffffff, #ffa477) ;
-    overflow: auto;
-    overflow-x: hidden;
+    overflow-y: scroll;
 }
 
 .background span {
@@ -22,7 +20,7 @@
     height: 10px;
     border-radius: 50%;
     backface-visibility: hidden;
-    position: absolute;
+    position: fixed;
     animation: move;
     animation-duration: 30;
     animation-timing-function: linear;

@@ -4,9 +4,7 @@
 @import url('button-hover.css');
 @import url('hire_me.css');
 
-
 body {
-    overflow: scroll;
     background-size: cover;
     background-position: top center;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -21,3 +19,6 @@ body {
     }
 }
 
+#content{
+    
+}
