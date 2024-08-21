@@ -56,10 +56,21 @@
     top: 50%;
 }
 
+.about-container {
+    background: linear-gradient(to bottom, #7ca1ff, #7199ff, #455b91, #171e2f);
+    border-radius: 20px;
+    padding: 45px;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    top: 50%;
+}
+
 .resume-container {
-    background: linear-gradient(to bottom, #7199ff, #7ca1ff, #455b91, #171e2f);
+    background: linear-gradient(to bottom,#7ca1ff, #7199ff, #455b91, #171e2f);
     border-radius: 15px;
-    padding: 10px;
+    padding: 15px;
     max-width: 800px;
     margin: 0 auto;
     text-align: center;
@@ -69,7 +80,7 @@
 }
 
 .contact-container {
-    background: linear-gradient(to bottom, #7199ff, #7ca1ff, #455b91, #171e2f);
+    background: linear-gradient(to bottom, #7ca1ff, #7199ff, #455b91, #171e2f);
     border-radius: 15px;
     padding: 20px;
     max-width: 800px;
@@ -91,6 +102,8 @@
 }
 
 /* Aplique a animação aos elementos necessários */
+.about-container::after,
+.about-container::before,
 .resume-container::after,
 .resume-container::before,
 .profile-container::after,

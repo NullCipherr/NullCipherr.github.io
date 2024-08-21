@@ -12,7 +12,7 @@
     height: 100%;
     top: 0;
     left: 0;
-    background: linear-gradient(to right, #44498b, #ffffff, #ffa477);
+    background: linear-gradient(to right, #44498b, #ffffff, #ffa477) ;
     overflow: auto;
     overflow-x: hidden;
 }
