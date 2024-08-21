@@ -46,7 +46,7 @@
 }
 
 .profile-container {
-    background: linear-gradient(to left, #b1a9b6,#245f90);
+    background: linear-gradient(to bottom, #7199ff, #7ca1ff, #455b91, #171e2f);
     border-radius: 20px;
     padding: 45px;
     max-width: 600px;
@@ -57,7 +57,7 @@
 }
 
 .resume-container {
-    background: linear-gradient(to left, #b1a9b6, #245f90);
+    background: linear-gradient(to bottom, #7199ff, #7ca1ff, #455b91, #171e2f);
     border-radius: 15px;
     padding: 10px;
     max-width: 800px;
@@ -69,7 +69,7 @@
 }
 
 .contact-container {
-    background: linear-gradient(to left, #b1a9b6, #245f90);
+    background: linear-gradient(to bottom, #7199ff, #7ca1ff, #455b91, #171e2f);
     border-radius: 15px;
     padding: 20px;
     max-width: 800px;
@@ -81,7 +81,7 @@
 }
 
 .featured-projects {
-    background: linear-gradient(to left, #b1a9b6, #245f90);
+    background: linear-gradient(to bottom, #7199ff, #7ca1ff, #455b91, #171e2f);
     border-radius: 20px;
 
     max-width: 800px;
