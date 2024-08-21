@@ -12,26 +12,26 @@
     height: 100%;
     top: 0;
     left: 0;
-    background: linear-gradient(to right, #1c2060, #ffffff, #d08365);
+    background: linear-gradient(to right, #44498b, #ffffff, #ffa477);
     overflow: auto;
     overflow-x: hidden;
 }
 
 .background span {
-    width: 15px;
-    height: 15px;
+    width: 10px;
+    height: 10px;
     border-radius: 50%;
     backface-visibility: hidden;
     position: absolute;
     animation: move;
     animation-duration: 30;
     animation-timing-function: linear;
-    animation-iteration-count: infinite;
+    animation-iteration-count: infinite;  
 }
 
 
 .background span:nth-child(0) {
-    color: #ffc28a;
+    color: #ffddbd;
     top: 10%;
     left: 13%;
     animation-duration: 175s;

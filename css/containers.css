@@ -46,7 +46,7 @@
 }
 
 .profile-container {
-    background-color: #3f3760;
+    background: linear-gradient(to left, #b1a9b6,#245f90);
     border-radius: 20px;
     padding: 45px;
     max-width: 600px;
@@ -57,7 +57,7 @@
 }
 
 .resume-container {
-    background-color: #3f3760;
+    background: linear-gradient(to left, #b1a9b6, #245f90);
     border-radius: 15px;
     padding: 10px;
     max-width: 800px;
@@ -69,7 +69,7 @@
 }
 
 .contact-container {
-    background-color: #3f3760;
+    background: linear-gradient(to left, #b1a9b6, #245f90);
     border-radius: 15px;
     padding: 20px;
     max-width: 800px;
@@ -81,7 +81,7 @@
 }
 
 .featured-projects {
-    background-color: #3f3760;
+    background: linear-gradient(to left, #b1a9b6, #245f90);
     border-radius: 20px;
 
     max-width: 800px;
@@ -103,7 +103,7 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    background-image: conic-gradient(from var(--angle), #ff6b6b, #3b82f6, #ff6b6b);
+    background-image: conic-gradient(from var(--angle), #ff3300, #0062ff,#0074d4, #ff0000);
     top: 50%;
     left: 50%;
     translate: -50% -50%;
