@@ -85,14 +85,14 @@
 }
 
 .about-container{
-
+    margin-top: 50px;
 }
 
 .featured-projects {
     width: 650px;
     height: 250px;
-    margin-top: 450px;
-    margin-bottom: 450px;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 .resume-container {

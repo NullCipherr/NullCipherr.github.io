@@ -59,14 +59,14 @@ section h2 {
 #projects h2 {
     color: rgb(19, 21, 54);
     font-size: 40px;
-    margin-top: -250px;
+    margin-top: -125px;
 }
 
 #projects p {
     text-align: left;
     text-indent: 50px;
     padding: 0px 20px;
-    margin-top: -650px;
+    margin-top: -200px;
 }
 
 .profile-container h1{
