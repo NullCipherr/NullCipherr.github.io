@@ -134,13 +134,16 @@ nav ul li a:hover::after {
 
 /* CSS para o logo */
 .logo {
+    max-width: 550px;
+    z-index: -1000;
     display: flex;
-    justify-content: center;
+    position: relative;
+    justify-content: right;
     /* Alinha o logo no centro horizontalmente */
     align-items: center;
     /* Alinha o logo no centro verticalmente */
-    margin: 0 auto;
-    /* Adiciona uma margem superior e inferior */
+    margin-left: 1250px;
+    margin-top: 30px;
 }
 
 .logo img {
@@ -148,9 +151,12 @@ nav ul li a:hover::after {
     /* Garante que o logo não exceda a largura do contêiner */
     height: auto;
     /* Mantém a proporção do logo */
-    width: auto;
+    width: 100%;
     /* Ajusta a largura automaticamente */
     max-height: 750px;
+    max-width: 350px;
+
+    -webkit-animation: piscar linear 10s infinite;
     /* Ajusta a altura máxima do logo (ajuste conforme necessário) */
     animation: piscar linear 10s infinite;
 
