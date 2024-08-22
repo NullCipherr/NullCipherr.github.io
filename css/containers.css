@@ -25,12 +25,12 @@
     flex-wrap: wrap;
     flex-direction: row;
     max-width: 650px;
-    max-height: 450px;
+    max-height: 550px;
     border-radius: 20px;
     padding: 75px;
     margin:auto;
-    margin-top: 125px;
-    margin-bottom: 250px;
+    margin-top: 120px;
+    margin-bottom: 350px;
 
     background-color: #6e4d7f8c;
     border-radius: 65px;
