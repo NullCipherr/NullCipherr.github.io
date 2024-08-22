@@ -40,13 +40,26 @@ function typeWriter(element, text, delay = 100) {
             i++;
             setTimeout(type, delay);
         } else {
-            // Adiciona uma classe que ativará o cursor piscando
-            element.classList.add('blinking-cursor');
+            // Adiciona o cursor piscante após a digitação
+            addBlinkingCursor(element);
         }
     }
     element.innerHTML = ""; // Limpa o texto antes de começar a digitação
     type();
 }
+
+function addBlinkingCursor(element) {
+    const cursor = document.createElement('div');
+    cursor.className = 'blinking-cursor';
+    cursor.textContent = '_';
+    element.appendChild(cursor);
+
+    setInterval(() => {
+        cursor.style.visibility = cursor.style.visibility === 'hidden' ? 'visible' : 'hidden';
+    }, 500); // Muda a visibilidade a cada 500ms
+}
+
+
 
 function startTypingAnimations() {
     const animations = [

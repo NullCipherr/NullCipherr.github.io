@@ -1,4 +1,5 @@
 .hire-me {
+    margin-top:5px;
     width: 100px;
     height: 40px;
     border: none;
@@ -6,11 +7,10 @@
     color: #fff;
     background: #ff7a6b;
     cursor: pointer;
-    position: relative;
-    z-index: 1;
-    margin-right: 25px;
+    z-index: 0;
     box-shadow: #7d5e5e 0px 0px 15px;
     border-radius: 10px;
+    position: relative;
 }
 .button_resume {
     width: 220px;
@@ -37,16 +37,17 @@
 .hire-me::before,
 .button_resume:before {
     content: '';
-    background: linear-gradient(45deg, #ff3300,#ffc526,#ff3300, #0062ff,#0074d4,#004dc9, #005396);
+    background: linear-gradient(30deg, #ff3300,#0062ff,#0074d4,#ff0000);
     position: absolute;
     top: -2px;
     left: -2px;
     background-size: 400%;
     z-index: -1;
-    filter: blur(5px);
+    filter: blur(10px);
     width: calc(100% + 4px);
     height: calc(100% + 4px);
     animation: glowing 20s linear infinite;
+    animation-delay: 0.5;
     opacity: 0;
     transition: opacity .35s ease-in-out;
     border-radius: 15px;

@@ -81,22 +81,29 @@
             <header>
                 <nav class="menu menu-1">
                     <ul>
+                        <li><a href="#home"><i class="fas fa-user"></i> Home</a></li>
+                        <div class="divider">|</div>
                         <li><a href="#about"><i class="fas fa-user"></i> About</a></li>
+                        <div class="divider">|</div>
                         <li><a href="#projects"><i class="fas fa-briefcase"></i> Projects</a></li>
+                        <div class="divider">|</div>
                         <li><a href="#resume"><i class="fas fa-file-alt"></i> Resume</a></li>
+                        <div class="divider">|</div>
                         <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
                     </ul>
-                    <button class="hire-me" onclick="sendEmail()">Hire me</button>
                 </nav>
-        
-                <div class="profile">
-                    <div class="profile-container">
+                
+                <section id="home">
+                    <div class="profile">
                         <img src="https://avatars.githubusercontent.com/u/141879308?v=4" alt="Foto de Andrei Costa">
-                        <h1></h1>
-                        <p>Hi everyone, my name is Andrei, I am a young technology and knowledge enthusiast. I am currently studying the last year of the
-                        computer science course at UEM, in Maringá, Paraná, Brazil.</p>
+                        <div class="profile-container">
+                            <h1></h1>
+                            <p>Hi everyone, my name is Andrei, I am a young technology and knowledge enthusiast. I am currently studying the last year of the
+                            computer science course at UEM, in Maringá, Paraná, Brazil.</p>
+                            <button class="hire-me" onclick="sendEmail()">Hire me</button>
+                        </div>
                     </div>
-                </div>
+                </section>
             </header>
 
             <section id="about">
@@ -119,11 +126,7 @@
             <section id="projects" class="featured-projects">
                 <h2>Featured Projects</h2>
                 <p>Brief intro goes here. My main experience lies in building lorem ipsum dolor sit amet...</p>
-                <div class="project-grid">
-                    <div class="project"></div>
-                    <div class="project"></div>
-                    <div class="project"></div>
-                </div>
+                
             </section>
             
             <section id="resume">

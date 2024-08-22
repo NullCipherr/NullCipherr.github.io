@@ -5,28 +5,48 @@ header {
 }
 
 nav {
-    position: relative;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #3d376686;
     box-shadow: #44498b 0px 0px 2px;
     border-radius: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 98.6%;
+    height: 60px;
+    z-index: 1;
 }
 
 nav ul {
-    list-style: none;
+    justify-content: right;
     display: flex;
-    gap: 50px;
+    margin-right: 70%;
+    list-style: none;
+    gap: 5px;
+
+}
+
+nav ul li a {
+    margin-top: -4px;
 }
 
 nav ul li a:hover {
+    text-size-adjust: 1000px;
     color: #ff6b6b;
 }
 
 nav ul li a:hover::after {
     width: 100%;
     left: 0;
+}
+
+.divider {
+    margin-top: -13px;
+    font-size: 20px;
+    padding: 7px;
+    color: #fff;
 }
 
 .menu {

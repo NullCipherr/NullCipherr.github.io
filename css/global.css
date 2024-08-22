@@ -28,5 +28,15 @@ body {
     }
 }
 
-#content{ 
+.blinking-cursor {
+    display: inline;
+        /* Faz o cursor se comportar como texto inline */
+        font-weight: bold;
+        /* Define o peso da fonte para o cursor */
+        font-size: 1em;
+        /* Ajusta o tamanho da fonte para corresponder ao texto */
+        visibility: visible;
+        /* Define a visibilidade padrão */
+        line-height: 1;
+        /* Garante que o cursor fique alinhado verticalmente com o texto */
 }
