@@ -10,10 +10,10 @@
 
 .profile img {
     position: static;
-    width: 110px;
-    height: 110px;
+    width: 8em; /* Tamanho relativo ao tamanho da fonte */
+    height: 8em;
     border-radius: 50%;
-    margin-top: -10px;
+    margin-top: -1em; /* Ajuste relativo ao tamanho da fonte */
     z-index: 1;
 }
 
@@ -25,11 +25,13 @@
     align-items: center;
     flex-wrap: wrap;
     flex-direction: row;
-    max-width: 650px;
-    max-height: 550px;
+    max-width: 80vw;
+    /* Percentual da largura da viewport */
+    max-height: 80vh;
+    /* Percentual da altura da viewport */
     border-radius: 20px;
-    padding: 75px;
-    margin:auto;
+    padding: 5%;/* Percentual baseado no contêiner pai */
+    margin: 5% auto;/* Centrando horizontalmente e definindo a margem superior */
     margin-top: 120px;
     margin-bottom: 350px;
 
@@ -38,10 +40,10 @@
     padding: 50px;
     max-width: 25%;
     text-align: center;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    -webkit-backdrop-filter: blur(7px);
-    backdrop-filter: blur(7px);
-    /* Fallback para navegadores que não suportam backdrop-filter */
+    
+    box-shadow: 0 0 1em rgba(0, 0, 0, 0.1);
+    -webkit-backdrop-filter: blur(0.5em);
+    backdrop-filter: blur(0.5em);
     background-color: #6e4d7f8c;
 }
 
@@ -136,3 +138,61 @@
 .featured-projects::before {
     filter: blur(1.5rem);
 }
+
+/* Media Queries para diferentes tamanhos de tela */
+
+/* Telas grandes (desktops) */
+@media (min-width: 1024px) {
+
+}
+
+/* Telas médias (tablets) */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .profile img {
+        width: 12vw;
+        height: 12vw;
+    }
+
+    .profile {
+        width: 70vw;
+        max-width: 65vw;
+        padding: 6vw;
+    }
+
+    .profile p {
+        font-size: 2vw;
+    }
+
+    .profile .btn {
+        padding: 0.6em 1.2em;
+    }
+}
+
+/* Telas pequenas (smartphones) */
+@media (max-width: 767px) {
+    .profile img {
+            width: 12vw;
+            height: 12vw;
+        }
+    
+        .profile {
+            width: 75vw;
+            max-width: 75vw;
+            max-height: 100vh;
+            height: 30vh;
+            padding: 5vw ;
+        }
+
+        
+
+
+        .profile p {
+            padding-top: 2vh;
+            font-size: 3vw;
+        }
+    
+        .profile .btn {
+            padding: 0.6em 1.2em;
+        }
+}
+

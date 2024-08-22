@@ -1,6 +1,6 @@
 header {
     text-align: center;
-    padding: 15px;
+    padding: 2vh;
 }
 
 
@@ -12,13 +12,14 @@ nav {
     align-items: center;
     background-color: #3d376686;
     box-shadow: #44498b 0px 0px 2px;
-    border-radius: 20px;
+    border-radius: 1.25vw;
     flex-direction: row;
     flex-wrap: wrap;
-    width: 98.6%;
+    width: 98%;
     height: 60px;
     z-index: 1;
-    padding: 10px;
+    padding: 1vh;
+        /* Ajuste proporcional para diferentes tamanhos de tela */
     box-sizing: border-box;
 }
 
@@ -26,15 +27,15 @@ nav ul {
     display: flex;
     justify-content: flex-start;
     list-style: none;
-    width: 100%;
     padding: 0;
     margin: 0;
 }
 
 nav ul li {
-    margin-left: 20px;
-    margin-top: 3px;
+    margin: 0 1.1vw;
     /* Ajuste a margem conforme necessário */
+    margin-top: 0.25vh;
+    margin-left: 2.8vw;
 }
 
 nav ul li a {
@@ -207,4 +208,58 @@ nav ul li a:hover::after {
         transform: matrix3d(1.1, 0, 0, 0, 0, 1.1, 0, 0, 0, 0, 1.1, 0, 0, 0, 0, 1);
     }
     
+}
+
+/* Media Query para telas grandes (desktops) */
+@media (min-width: 1024px) {
+
+}
+
+/* Media Query para telas médias (tablets) */
+@media (min-width: 768px) and (max-width: 1023px) {
+    nav {
+        height: 7vh;
+    }
+
+    nav ul li a {
+        font-size: 1.3vw;
+    }
+
+    .menu a {
+        font-size: 1.3vw;
+    }
+}
+
+/* Media Query para telas pequenas (smartphones) */
+@media (max-width: 767px) {
+    nav {
+        flex-direction: ;
+        height: auto;
+        padding: 2vh;
+    }
+
+    nav ul {
+        justify-content: center;
+        margin-right: 0;
+        gap: 1vh;
+    }
+
+    nav ul li {
+        margin-right: 0;
+        margin-left: 1vh;
+    }
+
+    nav ul li a {
+        font-size: 3vw;
+        margin-top: 0;
+    }
+
+    .menu a {
+        font-size: 1vw;
+    }
+
+    .logo img {
+        max-height: 40px;
+        /* Ajusta a altura máxima do logo em telas menores */
+    }
 }
