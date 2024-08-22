@@ -1,14 +1,16 @@
 .hire-me {
-    margin-top:5px;
+    margin-top:-5px;
     width: 100px;
-    height: 40px;
+    height: 42px;
     border: none;
     outline: none;
-    color: #fff;
+    color: #000000;
+    font-size: 16px;
+    font-weight: bolder;
     background: #ff7a6b;
     cursor: pointer;
     z-index: 0;
-    border-radius: 10px;
+    border-radius: 5px;
     position: relative;
 }
 .button_resume {
