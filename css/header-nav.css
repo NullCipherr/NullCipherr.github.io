@@ -154,7 +154,7 @@ nav ul li a:hover::after {
     /* Ajusta a altura máxima do logo (ajuste conforme necessário) */
     animation: piscar linear 10s infinite;
 
-    margin-left: 1500px;
+    margin-left: 1400px;
 }
 
 
@@ -173,7 +173,7 @@ nav ul li a:hover::after {
     }
 
     10% {
-        transform: rotate3d(4, 4, 4, 20deg);
+        transform: rotate3d(4, 4, 4, 90deg);
         transform: matrix3d(1.2, 0, 0, 0, 0, 1.2, 0, 0, 0, 0, 1.1, 0, 0, 0, 0, 1);
     }
 
