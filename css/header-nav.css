@@ -150,10 +150,10 @@ nav ul li a:hover::after {
     /* Mantém a proporção do logo */
     width: auto;
     /* Ajusta a largura automaticamente */
-    max-height: 225px;
+    max-height: 750px;
     /* Ajusta a altura máxima do logo (ajuste conforme necessário) */
     animation: piscar linear 10s infinite;
-    margin-top: 675px;
+
     margin-left: 1500px;
 }
 
@@ -167,10 +167,15 @@ nav ul li a:hover::after {
 }
 
 @keyframes piscar {
-    10% {
-        transform: matrix3d(1.2, 0, 0, 0, 0, 1.2, 0, 0, 0, 0, 1.1, 0, 0, 0, 0, 1);
+    0% {
+        transform: rotate3d(2, 2, 1, 10deg);
+        transform: matrix3d(1.1, 0, 0, 0, 0, 1.1, 0, 0, 0, 0, 1.1, 0, 0, 0, 0, 1);
     }
 
+    10% {
+        transform: rotate3d(4, 4, 4, 20deg);
+        transform: matrix3d(1.2, 0, 0, 0, 0, 1.2, 0, 0, 0, 0, 1.1, 0, 0, 0, 0, 1);
+    }
 
     50%{
         transform: rotate3d(2, 2, 1, 10deg);
@@ -178,6 +183,20 @@ nav ul li a:hover::after {
 
     100% {
         transform: rotate3d(2, 2, 1, -10deg);
+        transform: matrix3d(1.1, 0, 0, 0, 0, 1.1, 0, 0, 0, 0, 1.1, 0, 0, 0, 0, 1);
+    }
+
+    50%{
+        transform: rotate3d(2, 2, 1, 10deg);
+    }
+
+    100% {
+        transform: rotate3d(2, 2, 1, -10deg);
+        transform: matrix3d(1.1, 0, 0, 0, 0, 1.1, 0, 0, 0, 0, 1.1, 0, 0, 0, 0, 1);
+    }
+
+    0% {
+        transform: rotate3d(2, 2, 1, 10deg);
         transform: matrix3d(1.1, 0, 0, 0, 0, 1.1, 0, 0, 0, 0, 1.1, 0, 0, 0, 0, 1);
     }
     
