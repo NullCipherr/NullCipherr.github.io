@@ -3,6 +3,8 @@ header {
     padding: 15px;
 }
 
+
+
 nav {
     position: fixed;
     display: flex;
@@ -128,4 +130,55 @@ nav ul li a:hover::after {
         font-size: 12px;
         /* Ajuste para tamanhos menores */
     }
+}
+
+/* CSS para o logo */
+.logo {
+    display: flex;
+    justify-content: center;
+    /* Alinha o logo no centro horizontalmente */
+    align-items: center;
+    /* Alinha o logo no centro verticalmente */
+    margin: 0 auto;
+    /* Adiciona uma margem superior e inferior */
+}
+
+.logo img {
+    max-width: 100%;
+    /* Garante que o logo não exceda a largura do contêiner */
+    height: auto;
+    /* Mantém a proporção do logo */
+    width: auto;
+    /* Ajusta a largura automaticamente */
+    max-height: 225px;
+    /* Ajusta a altura máxima do logo (ajuste conforme necessário) */
+    animation: piscar linear 10s infinite;
+    margin-top: 675px;
+    margin-left: 1500px;
+}
+
+
+/* Media Query para tamanhos menores */
+@media (max-width: 768px) {
+    .logo img {
+        max-height: 40px;
+        /* Ajusta a altura máxima do logo em telas menores */
+    }
+}
+
+@keyframes piscar {
+    10% {
+        transform: matrix3d(1.2, 0, 0, 0, 0, 1.2, 0, 0, 0, 0, 1.1, 0, 0, 0, 0, 1);
+    }
+
+
+    50%{
+        transform: rotate3d(2, 2, 1, 10deg);
+    }
+
+    100% {
+        transform: rotate3d(2, 2, 1, -10deg);
+        transform: matrix3d(1.1, 0, 0, 0, 0, 1.1, 0, 0, 0, 0, 1.1, 0, 0, 0, 0, 1);
+    }
+    
 }
