@@ -12,9 +12,9 @@
     height: 100%;
     top: 0;
     left: 0;
-    background: -webkit-linear-gradient(to right, #44498b, #f66868, #ffa477);
-    background: -moz-linear-gradient(to right, #44498b, #f66868, #ffa477);
-    background: linear-gradient(to right, #44498b, #f66868, #ffa477) ;
+    background: -webkit-linear-gradient(to right, #455d7a, #f95959, #ffbe9d);
+    background: -moz-linear-gradient(to right, #455d7a, #f95959, #ffbe9d);
+    background: linear-gradient(to right, #455d7a, #f95959, #ffbe9d) ;
     overflow: hidden;
 }
 
