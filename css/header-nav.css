@@ -3,8 +3,6 @@ header {
     padding: 2vh;
 }
 
-
-
 nav {
     position: fixed;
     display: flex;
@@ -104,36 +102,6 @@ nav ul li a:hover::after {
     transform-origin: 0 50%;
 }
 
-/* Media Query para telas pequenas */
-@media (max-width: 768px) {
-    nav {
-        flex-direction: column;
-        height: auto;
-        padding: 10px;
-    }
-
-    nav ul {
-        justify-content: center;
-        margin-right: 0;
-        gap: 10px;
-    }
-
-    nav ul li {
-        margin-right: 0;
-    }
-
-    nav ul li a {
-        font-size: 12px;
-        /* Ajuste para tamanhos menores */
-        margin-top: 0;
-    }
-
-    .menu a {
-        font-size: 12px;
-        /* Ajuste para tamanhos menores */
-    }
-}
-
 /* CSS para o logo */
 .logo {
     max-width: 550px;
@@ -165,14 +133,6 @@ nav ul li a:hover::after {
     margin-left: 1400px;
 }
 
-
-/* Media Query para tamanhos menores */
-@media (max-width: 768px) {
-    .logo img {
-        max-height: 40px;
-        /* Ajusta a altura máxima do logo em telas menores */
-    }
-}
 
 @keyframes piscar {
     0% {
@@ -211,55 +171,82 @@ nav ul li a:hover::after {
 }
 
 /* Media Query para telas grandes (desktops) */
-@media (min-width: 1024px) {
-
-}
-
-/* Media Query para telas médias (tablets) */
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (min-width: 1024px)  and (max-width: 1366px) {
     nav {
+        width: 97%;
         height: 7vh;
     }
 
     nav ul li a {
-        font-size: 1.3vw;
+        margin-top: 3px;
+        font-size: 1.2vw;
+    }
+
+    .divider {
+        margin-left: 20px;
+        margin-top: -5px;
+        font-size: 20px;
+        padding: 9px;
+        color: #d3947597;
     }
 
     .menu a {
-        font-size: 1.3vw;
+        font-size: 1.2vw;
+    }
+    
+}
+
+/* Media Query para telas médias (tablets) */
+@media (min-width: 769px) and (max-width: 1023px) {
+    nav {
+        width: 97%;
+        height: 7vh;
+    }
+
+    nav ul{
+        
+    }
+
+    nav ul li a {
+        margin-top: 3px;
+        font-size: 1.2vw;
+    }
+
+    .divider {
+        margin-left: 20px;
+        margin-top: -5px;
+        font-size: 20px;
+        padding: 9px;
+        color: #d3947597;
+    }
+
+    .menu a {
+        font-size: 1.2vw;
     }
 }
 
 /* Media Query para telas pequenas (smartphones) */
-@media (max-width: 767px) {
+@media (min-width: 768px) and (max-width: 768px) {
+{
     nav {
-        flex-direction: ;
-        height: auto;
-        padding: 2vh;
-    }
-
-    nav ul {
-        justify-content: center;
-        margin-right: 0;
-        gap: 1vh;
-    }
-
-    nav ul li {
-        margin-right: 0;
-        margin-left: 1vh;
+        width: 90%;
+        height: 2vh;
     }
 
     nav ul li a {
-        font-size: 3vw;
-        margin-top: 0;
+        margin-top: 3px;
+        font-size: 1.2vw;
+    }
+
+    .divider {
+        margin-left: 20px;
+        margin-top: -5px;
+        font-size: 20px;
+        padding: 3px;
+        color: #d3947597;
     }
 
     .menu a {
-        font-size: 1vw;
-    }
-
-    .logo img {
-        max-height: 40px;
-        /* Ajusta a altura máxima do logo em telas menores */
+        font-size: 1.2vw;
     }
 }

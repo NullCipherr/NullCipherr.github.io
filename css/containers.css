@@ -142,7 +142,26 @@
 /* Media Queries para diferentes tamanhos de tela */
 
 /* Telas grandes (desktops) */
-@media (min-width: 1024px) {
+@media (min-width: 1024px) and (max-width: 1366px) {
+    .profile img {
+        width: 10vw;
+        height: 10vw;
+    }
+
+    .profile {
+        width: 40vw;
+        max-width: 65vw;
+        padding: 5vw;
+        box-shadow: 0 0 3em rgb(0, 0, 0);
+    }
+
+    .profile p {
+        font-size: 1.55vw;
+    }
+
+    .profile .btn {
+        padding: 0.6em 1.2em;
+    }
 
 }
 
@@ -154,13 +173,14 @@
     }
 
     .profile {
-        width: 70vw;
+        width: 40vw;
         max-width: 65vw;
-        padding: 6vw;
+        padding: 5vw;
+        box-shadow: 0 0 3em rgb(0, 0, 0);
     }
 
     .profile p {
-        font-size: 2vw;
+        font-size: 1.45vw;
     }
 
     .profile .btn {
@@ -168,31 +188,25 @@
     }
 }
 
-/* Telas pequenas (smartphones) */
-@media (max-width: 767px) {
+/* Telas pequenas (celulares) */
+@media (max-width: 768px) {
     .profile img {
-            width: 12vw;
-            height: 12vw;
-        }
-    
-        .profile {
-            width: 75vw;
-            max-width: 75vw;
-            max-height: 100vh;
-            height: 30vh;
-            padding: 5vw ;
-        }
+        width: 15vw;
+        height: 15vw;
+    }
 
-        
+    .profile {
+        width: 80vw;
+        max-width: 80vw;
+        padding: 5vw;
+        box-shadow: 0 0 3em rgb(0, 0, 0);
+    }
 
+    .profile p {
+        font-size: 1.35vw;
+    }
 
-        .profile p {
-            padding-top: 2vh;
-            font-size: 3vw;
-        }
-    
-        .profile .btn {
-            padding: 0.6em 1.2em;
-        }
+    .profile .btn {
+        padding: 0.6em 1.2em;
+    }
 }
-
