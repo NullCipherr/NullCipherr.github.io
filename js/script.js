@@ -6,10 +6,25 @@
 (() => {
     'use strict';
 
+    const desktopNavBreakpoint = 1080;
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+    const shouldSaveData = Boolean(
+        connection && (connection.saveData || ['slow-2g', '2g'].includes(connection.effectiveType))
+    );
+    let mobileMenuKeyHandler = null;
+
     /**
      * Inicializa o Intersection Observer para animações de fade-in contínuo e bonito.
      */
     const initScrollObserver = () => {
+        const fadeElements = document.querySelectorAll('.fade-element');
+
+        if (prefersReducedMotion) {
+            fadeElements.forEach(el => el.classList.add('is-visible'));
+            return;
+        }
+
         const observerOptions = {
             root: null,
             rootMargin: '0px',
@@ -25,7 +40,6 @@
             });
         }, observerOptions);
 
-        const fadeElements = document.querySelectorAll('.fade-element');
         fadeElements.forEach(el => observer.observe(el));
     };
 
@@ -51,7 +65,7 @@
 
                     window.scrollTo({
                         top: offsetPosition,
-                        behavior: "smooth"
+                        behavior: prefersReducedMotion ? 'auto' : 'smooth'
                     });
                 }
             });
@@ -64,21 +78,70 @@
     const initMobileMenu = () => {
         const menuToggle = document.querySelector('.menu-toggle');
         const navLinks = document.querySelector('.nav-links');
+        const focusableSelector = 'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])';
+        let lastFocusedElement = null;
 
         if (!menuToggle || !navLinks) return;
 
-        menuToggle.addEventListener('click', () => {
-            const isActive = navLinks.classList.toggle('active');
-            menuToggle.classList.toggle('active');
-            menuToggle.setAttribute('aria-expanded', isActive);
+        const handleMenuKeyboard = event => {
+            const isMenuActive = navLinks.classList.contains('active');
+            if (!isMenuActive) return;
 
-            // Bloqueia scroll apenas se o menu estiver ativo
-            document.body.style.overflow = isActive ? 'hidden' : '';
+            if (event.key === 'Escape') {
+                event.preventDefault();
+                closeMobileMenu();
+                menuToggle.focus();
+                return;
+            }
+
+            if (event.key !== 'Tab') return;
+
+            const focusableElements = navLinks.querySelectorAll(focusableSelector);
+            if (!focusableElements.length) return;
+
+            const firstElement = focusableElements[0];
+            const lastElement = focusableElements[focusableElements.length - 1];
+
+            if (event.shiftKey && document.activeElement === firstElement) {
+                event.preventDefault();
+                lastElement.focus();
+            } else if (!event.shiftKey && document.activeElement === lastElement) {
+                event.preventDefault();
+                firstElement.focus();
+            }
+        };
+
+        const openMenu = () => {
+            lastFocusedElement = document.activeElement;
+            navLinks.classList.add('active');
+            menuToggle.classList.add('active');
+            menuToggle.setAttribute('aria-expanded', 'true');
+            menuToggle.setAttribute('aria-label', menuToggle.getAttribute('data-menu-close-label') || 'Fechar menu');
+            document.body.style.overflow = 'hidden';
+            mobileMenuKeyHandler = handleMenuKeyboard;
+            document.addEventListener('keydown', mobileMenuKeyHandler);
+
+            const firstFocusable = navLinks.querySelector(focusableSelector);
+            if (firstFocusable) {
+                firstFocusable.focus();
+            }
+        };
+
+        menuToggle.addEventListener('click', () => {
+            if (navLinks.classList.contains('active')) {
+                closeMobileMenu();
+                if (lastFocusedElement instanceof HTMLElement) {
+                    lastFocusedElement.focus();
+                }
+                return;
+            }
+
+            openMenu();
         });
 
         // Corrigir bug de resize: se o usuário abrir o menu e aumentar a tela, o scroll volta ao normal
         window.addEventListener('resize', () => {
-            if (window.innerWidth > 850) {
+            if (window.innerWidth >= desktopNavBreakpoint) {
                 closeMobileMenu();
             }
         });
@@ -93,8 +156,19 @@
 
         if (navLinks && navLinks.classList.contains('active')) {
             navLinks.classList.remove('active');
-            menuToggle.classList.remove('active');
+            if (menuToggle) {
+                menuToggle.classList.remove('active');
+            }
+        }
+
+        if (mobileMenuKeyHandler) {
+            document.removeEventListener('keydown', mobileMenuKeyHandler);
+            mobileMenuKeyHandler = null;
+        }
+
+        if (menuToggle) {
             menuToggle.setAttribute('aria-expanded', 'false');
+            menuToggle.setAttribute('aria-label', menuToggle.getAttribute('data-menu-open-label') || 'Abrir menu');
         }
         // Sempre garante que o overflow volte ao normal ao fechar ou redimensionar
         document.body.style.overflow = '';
@@ -104,10 +178,27 @@
      * Gerencia o lazy loading do background do Hero e dispara as animações.
      */
     const initHeroVideo = () => {
+        const heroSection = document.getElementById('hero');
         const video = document.getElementById('hero-video');
         const heroContent = document.querySelector('#hero .hero-content');
 
-        if (!video) return;
+        if (!video || !heroSection) return;
+
+        const shouldDisableHeroVideo =
+            prefersReducedMotion || shouldSaveData || window.matchMedia('(max-width: 850px)').matches;
+
+        const revealHeroContent = (delay = 150) => {
+            if (!heroContent) return;
+            window.setTimeout(() => {
+                heroContent.classList.add('is-visible');
+            }, delay);
+        };
+
+        if (shouldDisableHeroVideo) {
+            video.classList.add('is-disabled');
+            revealHeroContent(0);
+            return;
+        }
 
         // Ajusta a velocidade do vídeo (0.8 = 20% mais lento)
         video.playbackRate = 0.925;
@@ -120,22 +211,40 @@
             video.play().catch(error => {
                 console.warn("Autoplay impedido:", error);
             });
+        };
 
-            // Dispara a animação de entrada do conteúdo do Hero
-            if (heroContent) {
-                setTimeout(() => {
-                    heroContent.classList.add('is-visible');
-                }, 300);
+        const loadVideoSources = () => {
+            let sourcesUpdated = false;
+            video.querySelectorAll('source[data-src]').forEach(source => {
+                const dataSrc = source.getAttribute('data-src');
+                if (dataSrc && !source.getAttribute('src')) {
+                    source.setAttribute('src', dataSrc);
+                    sourcesUpdated = true;
+                }
+            });
+
+            if (sourcesUpdated) {
+                video.load();
             }
         };
 
+        const videoObserver = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) return;
+                loadVideoSources();
+                videoObserver.disconnect();
+            });
+        }, { threshold: 0.15 });
+
+        videoObserver.observe(heroSection);
+
         // Suavização do loop
         video.addEventListener('waiting', () => {
-            video.style.opacity = '0.6';
+            video.classList.add('is-buffering');
         });
 
         video.addEventListener('playing', () => {
-            video.style.opacity = '0.75';
+            video.classList.remove('is-buffering');
         });
 
         // Verifica se o vídeo já carregou
@@ -144,6 +253,8 @@
         } else {
             video.addEventListener('canplaythrough', handleVideoReady, { once: true });
         }
+
+        revealHeroContent(200);
     };
 
     /**
@@ -233,6 +344,17 @@
                     }
                 });
             });
+
+            const menuToggle = document.querySelector('.menu-toggle');
+            if (menuToggle) {
+                const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+                menuToggle.setAttribute(
+                    'aria-label',
+                    isExpanded
+                        ? (menuToggle.getAttribute('data-menu-close-label') || 'Fechar menu')
+                        : (menuToggle.getAttribute('data-menu-open-label') || 'Abrir menu')
+                );
+            }
 
             // Atualiza o atributo lang do HTML
             document.documentElement.lang = lang === 'pt-br' ? 'pt-BR' : 'en';

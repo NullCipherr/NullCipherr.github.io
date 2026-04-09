@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Airport Bus: plataforma de operações aeroportuárias em tempo real com Phoenix API, Channels e console Vue 3.">
+    <meta name="robots" content="index, follow">
+    <title>Airport Bus: operações aeroportuárias realtime com Phoenix e Vue | Andrei Costa</title>
+    <link rel="canonical" href="https://nullcipherr.github.io/blog/artigos/airport-bus-phoenix-realtime.html">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Airport Bus: operações aeroportuárias realtime com Phoenix e Vue">
+    <meta property="og:description"
+        content="Autenticação stateless, contexto de domínio em Ops e sincronização da UI via eventos em tempo real.">
+    <meta property="og:url" content="https://nullcipherr.github.io/blog/artigos/airport-bus-phoenix-realtime.html">
+    <meta property="og:image" content="https://nullcipherr.github.io/assets/images/hero-bg.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=JetBrains+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../../css/blog.css">
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "BlogPosting",
+            "headline": "Airport Bus: operações aeroportuárias realtime com Phoenix e Vue",
+            "author": {
+                "@type": "Person",
+                "name": "Andrei Costa"
+            },
+            "publisher": {
+                "@type": "Person",
+                "name": "Andrei Costa"
+            },
+            "datePublished": "2026-04-09",
+            "dateModified": "2026-04-09",
+            "mainEntityOfPage": "https://nullcipherr.github.io/blog/artigos/airport-bus-phoenix-realtime.html"
+        }
+    </script>
+</head>
+
+<body>
+    <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+
+    <header class="blog-header">
+        <nav class="blog-nav" aria-label="Navegação do artigo">
+            <a href="../../index.html">Andrei Costa</a>
+            <div>
+                <a href="../index.html">Blog</a>
+                <a href="../../index.html#projetos">Projetos</a>
+                <a href="../../index.html#contato">Contato</a>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <article>
+            <p class="kicker">PROJETO: AIRPORT BUS</p>
+            <h1>Airport Bus: operações aeroportuárias realtime com Phoenix e Vue</h1>
+            <p class="article-meta">Publicado em 09/04/2026 • Leitura estimada: 6 min</p>
+
+            <p>
+                O Airport Bus centraliza operações críticas com abordagem realtime-first. A combinação entre API em
+                Phoenix, autenticação stateless e frontend Vue 3 garante fluxo claro para operação diária e evolução
+                segura do produto.
+            </p>
+
+            <h2>Fluxo principal de execução</h2>
+            <ol>
+                <li>Frontend autentica com <code>POST /api/auth/login</code>.</li>
+                <li>Backend valida credenciais e emite token assinado com <code>Phoenix.Token</code>.</li>
+                <li>Rotas privadas passam pelo plug de autorização.</li>
+                <li>Regras de negócio ficam centralizadas no contexto <code>Ops</code>.</li>
+                <li>Eventos são publicados em <code>ops:lobby</code> para atualização sem refresh.</li>
+            </ol>
+
+            <h2>Escolhas de engenharia com foco operacional</h2>
+            <ul>
+                <li>Contexto de domínio único para reduzir duplicação de regra em controllers.</li>
+                <li>Channels como mecanismo nativo de realtime com boa relação custo/valor.</li>
+                <li>Pipeline shell de validação com relatórios versionados em <code>docs/reports/</code>.</li>
+                <li>Separação backend/frontend para deploy independente.</li>
+            </ul>
+
+            <section class="interlink-box" aria-label="Leituras relacionadas">
+                <h3>Interlinks recomendados</h3>
+                <ul>
+                    <li><a class="link" href="https://github.com/NullCipherr/Airport-Bus" target="_blank" rel="noopener noreferrer">Repositório: Airport Bus</a></li>
+                    <li><a class="link" href="mercury-server-zig-http11.html">Próxima leitura: Mercury Server e backend low-level</a></li>
+                    <li><a class="link" href="../../index.html#contato">CTA: conversar sobre produto realtime</a></li>
+                </ul>
+            </section>
+
+            <footer>
+                Artigo técnico conectado ao projeto Airport Bus.
+            </footer>
+        </article>
+    </main>
+</body>
+
+</html>

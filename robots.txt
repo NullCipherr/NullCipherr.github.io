@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://nullcipherr.github.io/sitemap.xml

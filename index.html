@@ -4,9 +4,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#000000">
     <meta name="description" content="Andrei Roberto da Costa | Desenvolvedor de Software"
         data-i18n-attr="content:page_description">
     <title data-i18n="page_title">Andrei Roberto da Costa | Desenvolvedor de Software</title>
+    <link rel="canonical" href="https://nullcipherr.github.io/">
+    <link rel="alternate" href="https://nullcipherr.github.io/" hreflang="pt-BR">
+    <link rel="alternate" href="https://nullcipherr.github.io/" hreflang="en">
+    <link rel="alternate" href="https://nullcipherr.github.io/" hreflang="x-default">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Andrei Costa">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:locale:alternate" content="en_US">
+    <meta property="og:url" content="https://nullcipherr.github.io/">
+    <meta property="og:title" content="Andrei Roberto da Costa | Desenvolvedor de Software"
+        data-i18n-attr="content:page_title">
+    <meta property="og:description" content="Andrei Roberto da Costa | Desenvolvedor de Software e Especialista em IA"
+        data-i18n-attr="content:page_description">
+    <meta property="og:image" content="https://nullcipherr.github.io/assets/images/hero-bg.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Andrei Roberto da Costa | Desenvolvedor de Software"
+        data-i18n-attr="content:page_title">
+    <meta name="twitter:description"
+        content="Andrei Roberto da Costa | Desenvolvedor de Software e Especialista em IA"
+        data-i18n-attr="content:page_description">
+    <meta name="twitter:image" content="https://nullcipherr.github.io/assets/images/hero-bg.png">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,30 +40,74 @@
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=JetBrains+Mono:wght@400;700&display=swap"
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=WindSong:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+    <link rel="preload" as="image" href="assets/images/Background.webp" type="image/webp" fetchpriority="high">
+    <link rel="preload" as="image" href="assets/images/Background.png" fetchpriority="high">
 
     <!-- Styles -->
     <link rel="stylesheet" href="css/style.css">
+
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "Andrei Roberto da Costa",
+            "url": "https://nullcipherr.github.io/",
+            "jobTitle": "Desenvolvedor de Software",
+            "image": "https://avatars.githubusercontent.com/u/141879308?v=4",
+            "email": "mailto:blendsteal@gmail.com",
+            "sameAs": [
+                "https://github.com/NullCipherr"
+            ],
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Maringa",
+                "addressRegion": "Parana",
+                "addressCountry": "BR"
+            }
+        }
+    </script>
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "Andrei Costa Portfolio",
+            "url": "https://nullcipherr.github.io/",
+            "inLanguage": [
+                "pt-BR",
+                "en"
+            ]
+        }
+    </script>
 </head>
 
 <body>
+    <a href="#main-content" class="skip-link" data-i18n="skip_to_content">Pular para o conteúdo principal</a>
+
     <!-- Glassmorphism Header -->
     <header class="glass-header">
         <nav aria-label="Navegação principal" data-i18n-attr="aria-label:nav_aria_label">
             <div class="logo">AC.</div>
-            <ul class="nav-links">
+            <ul class="nav-links" id="nav-primary">
                 <li><a href="#sobre" data-i18n="nav_about">Sobre</a></li>
                 <li><a href="#experiencia" data-i18n="nav_experience">Experiência</a></li>
                 <li><a href="#habilidades" data-i18n="nav_skills">Habilidades</a></li>
+                <li><a href="#projetos" data-i18n="nav_projects">Projetos</a></li>
+                <li><a href="#conteudos" data-i18n="nav_content">Conteúdo</a></li>
+                <li><a href="#faq" data-i18n="nav_faq">FAQ</a></li>
                 <li><a href="#educacao" data-i18n="nav_education">Educação</a></li>
                 <li><a href="#contato" data-i18n="nav_contact">Contato</a></li>
             </ul>
             <div class="lang-switcher">
-                <button class="lang-btn active" data-lang="pt-br">PT</button>
+                <button class="lang-btn active" data-lang="pt-br" aria-label="Trocar idioma para Português"
+                    data-i18n-attr="aria-label:lang_pt_aria">PT</button>
                 <span class="lang-divider"></span>
-                <button class="lang-btn" data-lang="en">EN</button>
+                <button class="lang-btn" data-lang="en" aria-label="Switch language to English"
+                    data-i18n-attr="aria-label:lang_en_aria">EN</button>
             </div>
             <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false"
-                data-i18n-attr="aria-label:menu_aria_label">
+                aria-controls="nav-primary" data-menu-open-label="Abrir menu" data-menu-close-label="Fechar menu"
+                data-i18n-attr="aria-label:menu_aria_label_open,data-menu-open-label:menu_aria_label_open,data-menu-close-label:menu_aria_label_close">
                 <span class="bar bar-1"></span>
                 <span class="bar bar-2"></span>
                 <span class="bar bar-3"></span>
@@ -50,17 +119,20 @@
     <section id="hero">
         <!-- Background Lazy Loading Containers -->
         <div class="hero-bg-container">
-            <video id="hero-video" class="hero-bg-video" muted loop playsinline preload="auto">
-                <source src="assets/videos/Background.mp4" type="video/mp4">
+            <video id="hero-video" class="hero-bg-video" muted loop playsinline preload="metadata"
+                poster="assets/images/Background.webp" aria-hidden="true" tabindex="-1">
+                <source data-src="assets/videos/Background.webm" type="video/webm">
+                <source data-src="assets/videos/Background-optimized.mp4" type="video/mp4">
             </video>
-            <div class="hero-bg-image" style="background-image: url('assets/images/Background.png');"></div>
+            <div class="hero-bg-image" aria-hidden="true"></div>
             <div class="hero-overlay"></div>
         </div>
 
         <div class="hero-content">
             <div class="profile-container">
                 <img src="https://avatars.githubusercontent.com/u/141879308?v=4" alt="Andrei Roberto da Costa"
-                    class="hero-profile-img" data-i18n-attr="alt:profile_alt">
+                    class="hero-profile-img" width="200" height="200" loading="eager" fetchpriority="high"
+                    decoding="async" data-i18n-attr="alt:profile_alt">
             </div>
             <h1>
                 <span class="hero-name">Andrei Costa</span>
@@ -69,8 +141,17 @@
             <h2 data-i18n="hero_subtitle">Especialista em unir tecnologia e dados para construir soluções de IA
                 escaláveis e experiências
                 imersivas em games.</h2>
+            <p class="hero-value-prop mono-text" data-i18n="hero_value_prop">
+                Desenvolvimento orientado a performance, código limpo e foco em entrega de valor de ponta a ponta.
+            </p>
+            <div class="hero-proof-list">
+                <span class="hero-proof-item" data-i18n="hero_proof_1">Bacharel em Ciência da Computação (UEM)</span>
+                <span class="hero-proof-item" data-i18n="hero_proof_2">Experiência profissional desde 2017</span>
+                <span class="hero-proof-item" data-i18n="hero_proof_3">React, Node.js, Python e IA aplicada</span>
+            </div>
             <div class="social-links">
-                <a href="https://github.com/AndreiRCosta" target="_blank" rel="noopener noreferrer"
+                <a href="#projetos" class="cta-secondary" data-i18n="hero_projects">Ver Projetos</a>
+                <a href="https://github.com/NullCipherr" target="_blank" rel="noopener noreferrer"
                     class="cta-secondary">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                         <path
@@ -83,7 +164,7 @@
         </div>
     </section>
 
-    <main>
+    <main id="main-content" tabindex="-1">
 
         <!-- Sobre Mim Section -->
         <section id="sobre" class="fade-element">
@@ -116,9 +197,8 @@
                 <div class="timeline-item">
                     <div class="timeline-date mono-text" data-i18n="experience_date_now">Atual</div>
                     <div class="timeline-content">
-                        <h3 data-i18n="exp1_title">Desenvolvedor Python Júnior</h3>
-                        <p class="accent-text" style="margin-bottom: 0.8rem; font-size: 0.95rem; font-weight: bold;"
-                            data-i18n="exp1_company">
+                        <h3 data-i18n="exp1_title">Desenvolvedor Freelancer | Backend Python</h3>
+                        <p class="timeline-company accent-text" data-i18n="exp1_company">
                             Autônomo</p>
                         <p data-i18n="exp1_text">Foco em Backend (FastAPI, Flask) e Inteligência Artificial (Deep
                             Learning, Vision
@@ -127,9 +207,9 @@
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-content">
-                        <h3 data-i18n="exp2_title">Desenvolvedor Web Full-Stack Júnior</h3>
-                        <p class="accent-text" style="margin-bottom: 0.8rem; font-size: 0.95rem; font-weight: bold;"
-                            data-i18n="exp2_company">
+                        <div class="timeline-date mono-text" data-i18n="experience_date_fullstack">07/2022 - Atual</div>
+                        <h3 data-i18n="exp2_title">Desenvolvedor Freelancer | Full Stack</h3>
+                        <p class="timeline-company accent-text" data-i18n="exp2_company">
                             Autônomo</p>
                         <p data-i18n="exp2_text">Desenvolvimento end-to-end com React, Angular, TypeScript, Node.js e
                             Tailwind CSS.</p>
@@ -137,9 +217,9 @@
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-content">
-                        <h3 data-i18n="exp3_title">Desenvolvedor Unreal Engine Pleno</h3>
-                        <p class="accent-text" style="margin-bottom: 0.8rem; font-size: 0.95rem; font-weight: bold;"
-                            data-i18n="exp3_company">
+                        <div class="timeline-date mono-text" data-i18n="experience_date_game_freelance">02/2021 - 06/2023</div>
+                        <h3 data-i18n="exp3_title">Desenvolvedor Freelancer | Game Developer</h3>
+                        <p class="timeline-company accent-text" data-i18n="exp3_company">
                             Autônomo</p>
                         <p data-i18n="exp3_text">Criação de mecânicas 3D em C++ e Blueprints, sistemas multiplayer e
                             simuladores de física de
@@ -148,9 +228,9 @@
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-content">
-                        <h3 data-i18n="exp4_title">Desenvolvedor de Games Júnior</h3>
-                        <p class="accent-text" style="margin-bottom: 0.8rem; font-size: 0.95rem; font-weight: bold;"
-                            data-i18n="exp4_company">AST
+                        <div class="timeline-date mono-text" data-i18n="experience_date_ast">12/2017 - 02/2021</div>
+                        <h3 data-i18n="exp4_title">Desenvolvedor de Games</h3>
+                        <p class="timeline-company accent-text" data-i18n="exp4_company">AST Games
                             Studios</p>
                         <p data-i18n="exp4_text">Implementação de sistemas de rede e arte técnica (Blender, Substance
                             Painter) para Desktop,
@@ -183,17 +263,158 @@
             </div>
         </section>
 
+        <!-- Projetos Section -->
+        <section id="projetos" class="fade-element">
+            <h2 class="section-title" data-i18n="projects_title">Projetos em Destaque</h2>
+            <div class="projects-grid">
+                <article class="project-card">
+                    <div class="project-head">
+                        <h3 data-i18n="project1_title">Mercury Server</h3>
+                        <p class="project-stack mono-text" data-i18n="project1_stack">
+                            Zig 0.14+ • HTTP/1.1 • Parser manual • Connection Pool • Métricas em tempo real
+                        </p>
+                    </div>
+                    <p data-i18n="project1_desc">
+                        Servidor HTTP/1.1 low-level em Zig com parser escrito manualmente, workers fixos e isolamento
+                        entre accept/processamento para reduzir overhead e manter previsibilidade operacional.
+                    </p>
+                    <div class="project-links">
+                        <a href="https://github.com/NullCipherr/Mercury-Server" target="_blank" rel="noopener noreferrer"
+                            data-i18n="project1_repo_cta">Ver repositório</a>
+                        <a href="https://github.com/NullCipherr/Mercury-Server/tree/main/docs" target="_blank"
+                            rel="noopener noreferrer" data-i18n="project1_docs_cta">Ver documentação</a>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-head">
+                        <h3 data-i18n="project2_title">GRIT Engine</h3>
+                        <p class="project-stack mono-text" data-i18n="project2_stack">
+                            TypeScript 5.8 • WebGL2 • Spatial Hashing • Instancing GPU • API Tipada
+                        </p>
+                    </div>
+                    <p data-i18n="project2_desc">
+                        Engine de partículas em tempo real, agnóstica a framework, com runtime imperativo,
+                        renderização WebGL2 e foco em simulações interativas de alta performance para web.
+                    </p>
+                    <div class="project-links">
+                        <a href="https://github.com/NullCipherr/GRIT-Engine" target="_blank" rel="noopener noreferrer"
+                            data-i18n="project2_repo_cta">Ver repositório</a>
+                        <a href="https://github.com/NullCipherr/GRIT-Engine/tree/main/docs" target="_blank"
+                            rel="noopener noreferrer" data-i18n="project2_docs_cta">Ver documentação</a>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-head">
+                        <h3 data-i18n="project3_title">Airport Bus</h3>
+                        <p class="project-stack mono-text" data-i18n="project3_stack">
+                            Elixir 1.16+ • Phoenix 1.7+ • PostgreSQL 14+ • Vue 3 • Phoenix Channels
+                        </p>
+                    </div>
+                    <p data-i18n="project3_desc">
+                        Plataforma de operações aeroportuárias em tempo real com API Phoenix, autenticação stateless
+                        por token assinado e console web em Vue 3 com atualização contínua via eventos.
+                    </p>
+                    <div class="project-links">
+                        <a href="https://github.com/NullCipherr/Airport-Bus" target="_blank" rel="noopener noreferrer"
+                            data-i18n="project3_repo_cta">Ver repositório</a>
+                        <a href="https://github.com/NullCipherr/Airport-Bus/tree/main/docs" target="_blank"
+                            rel="noopener noreferrer" data-i18n="project3_docs_cta">Ver documentação</a>
+                    </div>
+                </article>
+            </div>
+            <p class="projects-cta">
+                <a href="https://github.com/NullCipherr?tab=repositories" target="_blank" rel="noopener noreferrer"
+                    data-i18n="projects_blog_cta">Ver meus repositórios no GitHub</a>
+            </p>
+        </section>
+
+        <!-- Conteúdo Técnico Section -->
+        <section id="conteudos" class="fade-element">
+            <h2 class="section-title" data-i18n="content_title">Conteúdo Técnico</h2>
+            <p class="section-intro" data-i18n="content_intro">
+                Base editorial criada para conectar artigos, projetos e oportunidades reais de negócio com foco em
+                descoberta orgânica.
+            </p>
+
+            <div class="content-pillars-grid">
+                <article class="content-card">
+                    <p class="content-card-tag mono-text" data-i18n="content_pillar_1_tag">Pilar: Front-end</p>
+                    <h3 data-i18n="content_pillar_1_title">Arquitetura Front-end Escalável para Landing + Blog</h3>
+                    <p data-i18n="content_pillar_1_desc">
+                        Estrutura prática para evoluir uma landing page em canal de conteúdo sem perder performance,
+                        semântica e manutenção.
+                    </p>
+                    <a href="blog/artigos/mercury-server-zig-http11.html" data-i18n="content_read_article">Ler
+                        artigo</a>
+                </article>
+
+                <article class="content-card">
+                    <p class="content-card-tag mono-text" data-i18n="content_pillar_2_tag">Pilar: Python + Dados</p>
+                    <h3 data-i18n="content_pillar_2_title">Pipelines de Dados com Python para Projetos em Produção</h3>
+                    <p data-i18n="content_pillar_2_desc">
+                        Guia de arquitetura para automação e APIs orientadas a dados com foco em previsibilidade e
+                        observabilidade.
+                    </p>
+                    <a href="blog/artigos/grit-engine-webgl2-realtime.html" data-i18n="content_read_article">Ler
+                        artigo</a>
+                </article>
+
+                <article class="content-card">
+                    <p class="content-card-tag mono-text" data-i18n="content_pillar_3_tag">Pilar: Games</p>
+                    <h3 data-i18n="content_pillar_3_title">Arquitetura Multiplayer em Unreal para Times Enxutos</h3>
+                    <p data-i18n="content_pillar_3_desc">
+                        Decisões técnicas para reduzir retrabalho em jogos multiplayer e acelerar novas entregas com
+                        componentes reutilizáveis.
+                    </p>
+                    <a href="blog/artigos/airport-bus-phoenix-realtime.html" data-i18n="content_read_article">Ler
+                        artigo</a>
+                </article>
+            </div>
+
+            <p class="content-blog-cta">
+                <a href="blog/index.html" data-i18n="content_blog_cta">Ir para o Blog Técnico</a>
+            </p>
+        </section>
+
+        <!-- Prova Social Section -->
+        <section id="prova-social" class="fade-element">
+            <h2 class="section-title" data-i18n="proof_title">Resultados e Credibilidade</h2>
+            <div class="proof-grid">
+                <article class="proof-card">
+                    <h3 data-i18n="proof1_title">Formação Sólida</h3>
+                    <p data-i18n="proof1_text">
+                        Bacharel em Ciência da Computação pela UEM, com base forte em engenharia de software e IA.
+                    </p>
+                </article>
+                <article class="proof-card">
+                    <h3 data-i18n="proof2_title">Atualização Contínua</h3>
+                    <p data-i18n="proof2_text">
+                        Certificações recentes em Deep Learning, Python e Prompt Engineering aplicados ao mercado.
+                    </p>
+                </article>
+                <article class="proof-card">
+                    <h3 data-i18n="proof3_title">Experiência em Produção</h3>
+                    <p data-i18n="proof3_text">
+                        Atuação em projetos reais com escopos de web, backend orientado a dados e desenvolvimento de
+                        games.
+                    </p>
+                </article>
+            </div>
+        </section>
+
         <!-- Educação e Idiomas Section -->
         <section id="educacao" class="fade-element">
             <h2 class="section-title" data-i18n="education_title">Educação e Idiomas</h2>
             <div class="bento-grid">
-                <div class="bento-item" style="border-left: 3px solid var(--accent);">
+                <div class="bento-item bento-item-highlight">
                     <h3 data-i18n="edu_title">Formação Acadêmica</h3>
                     <p class="mono-text" data-i18n-html="edu_text">Bacharel em Ciência da Computação<br>Universidade
                         Estadual de Maringá
                         (Concluído em 12/2024)</p>
                 </div>
-                <div class="bento-item" style="border-left: 3px solid var(--accent);">
+                <div class="bento-item bento-item-highlight">
                     <h3 data-i18n="languages_title">Idiomas</h3>
                     <p class="mono-text">
                         <span data-i18n="lang_en">Inglês (Intermediário)</span><br>
@@ -201,6 +422,41 @@
                         <span data-i18n="lang_fr">Francês (Básico)</span>
                     </p>
                 </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="fade-element">
+            <h2 class="section-title" data-i18n="faq_title">Perguntas Frequentes</h2>
+            <div class="faq-list">
+                <details class="faq-item">
+                    <summary data-i18n="faq_q1">Quais tipos de projeto você desenvolve?</summary>
+                    <p data-i18n="faq_a1">
+                        Atuo em aplicações web full stack, backend em Python com APIs e automação orientada a dados,
+                        além de sistemas para games em Unreal/Unity.
+                    </p>
+                </details>
+                <details class="faq-item">
+                    <summary data-i18n="faq_q2">Como funciona seu processo de trabalho?</summary>
+                    <p data-i18n="faq_a2">
+                        Inicio com entendimento de requisitos, sigo com prototipação técnica, desenvolvimento iterativo
+                        e entregas incrementais com validação contínua.
+                    </p>
+                </details>
+                <details class="faq-item">
+                    <summary data-i18n="faq_q3">Você trabalha com APIs e integrações?</summary>
+                    <p data-i18n="faq_a3">
+                        Sim. Tenho experiência com APIs REST, integrações de serviços e estruturação de camadas de
+                        dados para aplicações escaláveis.
+                    </p>
+                </details>
+                <details class="faq-item">
+                    <summary data-i18n="faq_q4">Como posso iniciar um projeto com você?</summary>
+                    <p data-i18n="faq_a4">
+                        Entre em contato por e-mail com o contexto do projeto. Retorno com os próximos
+                        passos e proposta de execução.
+                    </p>
+                </details>
             </div>
         </section>
 
@@ -212,14 +468,17 @@
                 <p data-i18n="contact_text">Entre em contato para discutirmos novas ideias, oportunidades em IA,
                     desenvolvimento web ou games.
                 </p>
-                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-                    <a href="mailto:blendsteal@gmail.com" class="cta-button" data-i18n="contact_email">
-                        📧 E-mail: blendsteal@gmail.com
+                <div class="contact-actions">
+                    <a href="mailto:arcodeworks@gmail.com" class="cta-button" data-i18n="contact_email">
+                        📧 E-mail: arcodeworks@gmail.com
+                    </a>
+                    <a href="https://github.com/NullCipherr" target="_blank" rel="noopener noreferrer"
+                        class="cta-button cta-button-secondary" data-i18n="contact_github_cta">
+                        💼 GitHub: @NullCipherr
                     </a>
                 </div>
-                <div style="margin-top: 2rem;">
-                    <p style="color: var(--text-muted); font-family: var(--font-mono); font-size: 0.9rem;"
-                        data-i18n="contact_location">📍
+                <div class="contact-meta">
+                    <p class="contact-location mono-text" data-i18n="contact_location">📍
                         Localização: Maringá, Paraná</p>
                 </div>
             </div>
@@ -228,23 +487,22 @@
 
     <!-- Footer -->
     <footer class="premium-footer fade-element">
-        <div class="footer-tech-note"
-            style="text-align: center; opacity: 0.8; font-style: italic; margin-bottom: 20px;">
-            <p data-i18n="footer_tech_note">
-                "Desenvolvido com HTML5, CSS3 e Vanilla JS — Performance máxima."
-            </p>
-        </div>
         <div class="footer-container">
+            <div class="footer-tech-note">
+                <p data-i18n="footer_tech_note">
+                    "Desenvolvido com HTML5, CSS3 e Vanilla JS — Performance máxima."
+                </p>
+            </div>
             <div class="footer-legal">
-                <div class="logo">Andrei.</div>
                 <p>&copy; <span id="current-year"></span> Andrei Costa. <span data-i18n="footer_rights">Todos os
                         direitos reservados.</span></p>
+                <a href="#hero" class="footer-back-top" data-i18n="footer_back_top">Voltar ao topo</a>
             </div>
         </div>
     </footer>
 
     <!-- JS -->
-    <script src="js/script.js"></script>
+    <script src="js/script.js" defer></script>
 </body>
 
 </html>

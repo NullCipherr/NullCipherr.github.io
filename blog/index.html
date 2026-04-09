@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Biblioteca de artigos técnicos conectada aos projetos Mercury Server, GRIT Engine e Airport Bus.">
+    <meta name="robots" content="index, follow">
+    <title>Blog Técnico | Andrei Costa</title>
+    <link rel="canonical" href="https://nullcipherr.github.io/blog/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Blog Técnico | Andrei Costa">
+    <meta property="og:description"
+        content="Artigos estratégicos conectados aos principais projetos de engenharia: Mercury Server, GRIT Engine e Airport Bus.">
+    <meta property="og:url" content="https://nullcipherr.github.io/blog/">
+    <meta property="og:image" content="https://nullcipherr.github.io/assets/images/hero-bg.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=JetBrains+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=WindSong:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/blog.css">
+</head>
+
+<body>
+    <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+
+    <header class="blog-header">
+        <nav class="blog-nav" aria-label="Navegação do blog">
+            <a href="../index.html" class="logo" aria-label="Andrei Costa - Início">AC.</a>
+            <div>
+                <a href="../index.html#projetos">Projetos</a>
+                <a href="../index.html#contato">Contato</a>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section class="hero blog-hero">
+            <p class="kicker">ENGENHARIA APLICADA</p>
+            <h1>Blog Técnico de Arquitetura, Performance e Realtime</h1>
+            <p>
+                Conteúdo escrito a partir de projetos reais em produção, com foco em decisões arquiteturais, trade-offs
+                técnicos e execução orientada a resultado.
+            </p>
+            <div class="blog-topics" aria-label="Temas principais do blog">
+                <a href="#ultimos-artigos">Backend low-level</a>
+                <a href="#ultimos-artigos">Renderização WebGL2</a>
+                <a href="#ultimos-artigos">Produtos realtime</a>
+            </div>
+        </section>
+
+        <section class="featured-layout" aria-label="Destaque editorial">
+            <article class="featured-article">
+                <p class="kicker">ARTIGO EM DESTAQUE</p>
+                <h2>Mercury Server: arquitetura low-level de HTTP/1.1 em Zig</h2>
+                <p>
+                    Um guia direto sobre parser manual, connection pooling, timeouts por socket e observabilidade de
+                    latência para construir um servidor previsível.
+                </p>
+                <div class="featured-meta">
+                    <span>Zig 0.14+</span>
+                    <span>HTTP/1.1</span>
+                    <span>Performance</span>
+                </div>
+                <a class="featured-link" href="artigos/mercury-server-zig-http11.html">Ler artigo em destaque</a>
+            </article>
+
+            <aside class="featured-side" aria-label="Resumo do blog">
+                <h3>Guia de leitura</h3>
+                <p>Explore artigos por projeto para entender como cada stack foi desenhada, validada e evoluída.</p>
+                <ul>
+                    <li>Mercury Server: backend low-level e benchmark.</li>
+                    <li>GRIT Engine: simulação visual em escala com WebGL2.</li>
+                    <li>Airport Bus: domínio operacional com eventos realtime.</li>
+                </ul>
+                <a class="link" href="../index.html#projetos">Ver projetos no portfólio</a>
+            </aside>
+        </section>
+
+        <section id="ultimos-artigos" class="latest-section" aria-label="Últimos artigos">
+            <div class="section-head">
+                <h2>Últimos Artigos</h2>
+                <a class="link" href="../index.html#contato">Sugerir tema</a>
+            </div>
+
+            <div class="grid" aria-label="Lista de artigos">
+                <article class="card">
+                    <p class="meta">Projeto: Mercury Server • Leitura: 6 min</p>
+                    <h3>Mercury Server: arquitetura low-level de HTTP/1.1 em Zig</h3>
+                    <p>Como estruturar parser manual, workers fixos e métricas para reduzir incerteza operacional.</p>
+                    <a href="artigos/mercury-server-zig-http11.html">Ler artigo</a>
+                </article>
+
+                <article class="card">
+                    <p class="meta">Projeto: GRIT Engine • Leitura: 6 min</p>
+                    <h3>GRIT Engine: simulação de partículas WebGL2 em alta escala</h3>
+                    <p>Estratégias de spatial hashing, instancing GPU e controle de budget adaptativo em tempo real.
+                    </p>
+                    <a href="artigos/grit-engine-webgl2-realtime.html">Ler artigo</a>
+                </article>
+
+                <article class="card">
+                    <p class="meta">Projeto: Airport Bus • Leitura: 6 min</p>
+                    <h3>Airport Bus: operações aeroportuárias realtime com Phoenix e Vue</h3>
+                    <p>Autenticação stateless, contexto Ops e sincronização de UI sem refresh via Channels.</p>
+                    <a href="artigos/airport-bus-phoenix-realtime.html">Ler artigo</a>
+                </article>
+            </div>
+        </section>
+
+        <section class="editorial" aria-label="Trilhas editoriais">
+            <h2>Trilhas Editoriais</h2>
+            <p>Cada trilha aprofunda um problema técnico real e conecta conteúdo com implementação prática.</p>
+            <div class="trail-grid">
+                <article class="trail-card">
+                    <h3>Backend e Rede</h3>
+                    <p>Servidores, protocolos, observabilidade e engenharia de desempenho.</p>
+                </article>
+                <article class="trail-card">
+                    <h3>Renderização e Simulação</h3>
+                    <p>WebGL2, arquiteturas interativas e otimização de runtime no navegador.</p>
+                </article>
+                <article class="trail-card">
+                    <h3>Sistemas Realtime</h3>
+                    <p>Eventos, consistência de estado, operações críticas e evolução incremental.</p>
+                </article>
+            </div>
+            <p class="editorial-cta">
+                <a class="link" href="../index.html#contato">Quero discutir um projeto com essa abordagem</a>
+            </p>
+        </section>
+    </main>
+</body>
+
+</html>
