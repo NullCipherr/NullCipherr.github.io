@@ -290,7 +290,7 @@
      * Gerencia a tradução do site (I18n)
      */
     const initI18n = async () => {
-        const langBtns = document.querySelectorAll('.lang-btn');
+        const langToggle = document.querySelector('.lang-toggle');
         const defaultLang = 'pt-br';
         let currentLang = localStorage.getItem('preferred-lang') || defaultLang;
 
@@ -359,28 +359,34 @@
             // Atualiza o atributo lang do HTML
             document.documentElement.lang = lang === 'pt-br' ? 'pt-BR' : 'en';
 
-            // Atualiza o estado dos botões
-            langBtns.forEach(btn => {
-                btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
-            });
+            // Atualiza o estado do toggle
+            if (langToggle) {
+                const isEnglish = lang === 'en';
+                const nextLangAriaKey = isEnglish ? 'lang_pt_aria' : 'lang_en_aria';
+                const fallbackAria = isEnglish
+                    ? 'Switch language to Portuguese'
+                    : 'Trocar idioma para Inglês';
+
+                langToggle.classList.toggle('is-en', isEnglish);
+                langToggle.setAttribute('aria-pressed', String(isEnglish));
+                langToggle.setAttribute('aria-label', data[nextLangAriaKey] || fallbackAria);
+            }
 
             // Salva a preferência
             localStorage.setItem('preferred-lang', lang);
         };
 
-        // Event Listeners para os botões de troca de idioma
-        langBtns.forEach(btn => {
-            btn.addEventListener('click', async () => {
-                const lang = btn.getAttribute('data-lang');
-                if (lang === currentLang) return;
-
+        // Event Listener para o toggle de idioma
+        if (langToggle) {
+            langToggle.addEventListener('click', async () => {
+                const lang = currentLang === 'pt-br' ? 'en' : 'pt-br';
                 const data = await loadTranslations(lang);
                 if (data) {
                     currentLang = lang;
                     applyTranslations(lang, data);
                 }
             });
-        });
+        }
 
         // Inicializa com o idioma salvo ou padrão
         const initialData = await loadTranslations(currentLang);

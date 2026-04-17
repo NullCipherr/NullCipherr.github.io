@@ -95,15 +95,16 @@
                 <li><a href="#projetos" data-i18n="nav_projects">Projetos</a></li>
                 <li><a href="#conteudos" data-i18n="nav_content">Conteúdo</a></li>
                 <li><a href="#faq" data-i18n="nav_faq">FAQ</a></li>
-                <li><a href="#educacao" data-i18n="nav_education">Educação</a></li>
                 <li><a href="#contato" data-i18n="nav_contact">Contato</a></li>
             </ul>
             <div class="lang-switcher">
-                <button class="lang-btn active" data-lang="pt-br" aria-label="Trocar idioma para Português"
-                    data-i18n-attr="aria-label:lang_pt_aria">PT</button>
-                <span class="lang-divider"></span>
-                <button class="lang-btn" data-lang="en" aria-label="Switch language to English"
-                    data-i18n-attr="aria-label:lang_en_aria">EN</button>
+                <button class="lang-toggle" type="button" aria-label="Trocar idioma para Inglês" aria-pressed="false">
+                    <span class="lang-toggle-label">PT</span>
+                    <span class="lang-toggle-track" aria-hidden="true">
+                        <span class="lang-toggle-thumb"></span>
+                    </span>
+                    <span class="lang-toggle-label">EN</span>
+                </button>
             </div>
             <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false"
                 aria-controls="nav-primary" data-menu-open-label="Abrir menu" data-menu-close-label="Fechar menu"
@@ -168,7 +169,10 @@
 
         <!-- Sobre Mim Section -->
         <section id="sobre" class="fade-element">
-            <h2 class="section-title" data-i18n="about_title">Sobre Mim</h2>
+            <div class="about-heading">
+                <h2 class="section-title" data-i18n="about_title">Sobre Mim</h2>
+                <span class="about-heading-line" aria-hidden="true"></span>
+            </div>
             <div class="about-content">
                 <p data-i18n="about_text_1">
                     Iniciei minha jornada como Level Designer 3D em uma startup de desenvolvimento
@@ -186,6 +190,20 @@
                     avançados e algoritmos de Machine Learning para resolver problemas complexos e otimizar a
                     experiência do usuário. Minha trajetória reflete essa transição contínua entre a engenharia de
                     software clássica e as tecnologias emergentes que moldam o futuro.
+                </p>
+
+                <p data-i18n="about_text_3">
+                    Valorizo colaboração próxima com produto e negócio, transformando requisitos em soluções técnicas
+                    claras, mensuráveis e sustentáveis para o longo prazo, sem perder velocidade de entrega.
+                </p>
+
+                <p data-i18n-html="about_education_text">
+                    <strong>Formação Acadêmica:</strong> Bacharel em Ciência da Computação pela Universidade Estadual de
+                    Maringá (UEM), com conclusão em 12/2024.
+                </p>
+
+                <p data-i18n-html="about_languages_text">
+                    <strong>Idiomas:</strong> Inglês (Intermediário), Espanhol (Básico) e Francês (Básico).
                 </p>
             </div>
         </section>
@@ -242,7 +260,20 @@
 
         <!-- Habilidades Section -->
         <section id="habilidades" class="fade-element">
-            <h2 class="section-title" data-i18n="skills_title">Habilidades Técnicas</h2>
+            <div class="skills-heading">
+                <h2 class="section-title" data-i18n="skills_title">Habilidades Técnicas</h2>
+                <span class="skills-heading-line" aria-hidden="true"></span>
+            </div>
+            <div class="section-intro-group">
+                <p class="section-intro" data-i18n="skills_intro_1">
+                    Combino base sólida em engenharia de software com prática contínua em arquitetura de aplicações,
+                    modelagem de dados e integração de sistemas.
+                </p>
+                <p class="section-intro" data-i18n="skills_intro_2">
+                    O foco é transformar domínio técnico em entregas previsíveis: código limpo, performance consistente
+                    e evolução sustentável do produto.
+                </p>
+            </div>
             <div class="bento-grid">
                 <div class="bento-item">
                     <h3 data-i18n="skill1_title">IA e Dados</h3>
@@ -266,6 +297,16 @@
         <!-- Projetos Section -->
         <section id="projetos" class="fade-element">
             <h2 class="section-title" data-i18n="projects_title">Projetos em Destaque</h2>
+            <div class="section-intro-group">
+                <p class="section-intro" data-i18n="projects_intro_1">
+                    Esta seleção reúne projetos construídos com foco em arquitetura, confiabilidade operacional e
+                    decisões técnicas orientadas a contexto real.
+                </p>
+                <p class="section-intro" data-i18n="projects_intro_2">
+                    Cada iniciativa demonstra capacidade de execução end-to-end, desde a base de engenharia até
+                    documentação, testes e manutenção evolutiva.
+                </p>
+            </div>
             <div class="projects-grid">
                 <article class="project-card">
                     <div class="project-head">
@@ -333,10 +374,16 @@
         <!-- Conteúdo Técnico Section -->
         <section id="conteudos" class="fade-element">
             <h2 class="section-title" data-i18n="content_title">Conteúdo Técnico</h2>
-            <p class="section-intro" data-i18n="content_intro">
-                Base editorial criada para conectar artigos, projetos e oportunidades reais de negócio com foco em
-                descoberta orgânica.
-            </p>
+            <div class="section-intro-group">
+                <p class="section-intro" data-i18n="content_intro_1">
+                    Base editorial criada para conectar artigos, projetos e oportunidades reais de negócio com foco em
+                    descoberta orgânica.
+                </p>
+                <p class="section-intro" data-i18n="content_intro_2">
+                    O objetivo é publicar conteúdo técnico aplicável, com profundidade prática e alinhamento direto com
+                    demandas de produto, performance e escala.
+                </p>
+            </div>
 
             <div class="content-pillars-grid">
                 <article class="content-card">
@@ -401,27 +448,6 @@
                         games.
                     </p>
                 </article>
-            </div>
-        </section>
-
-        <!-- Educação e Idiomas Section -->
-        <section id="educacao" class="fade-element">
-            <h2 class="section-title" data-i18n="education_title">Educação e Idiomas</h2>
-            <div class="bento-grid">
-                <div class="bento-item bento-item-highlight">
-                    <h3 data-i18n="edu_title">Formação Acadêmica</h3>
-                    <p class="mono-text" data-i18n-html="edu_text">Bacharel em Ciência da Computação<br>Universidade
-                        Estadual de Maringá
-                        (Concluído em 12/2024)</p>
-                </div>
-                <div class="bento-item bento-item-highlight">
-                    <h3 data-i18n="languages_title">Idiomas</h3>
-                    <p class="mono-text">
-                        <span data-i18n="lang_en">Inglês (Intermediário)</span><br>
-                        <span data-i18n="lang_es">Espanhol (Básico)</span><br>
-                        <span data-i18n="lang_fr">Francês (Básico)</span>
-                    </p>
-                </div>
             </div>
         </section>
 
