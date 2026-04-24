@@ -27,7 +27,7 @@
 
     /* Tipografia e Movimento */
     --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
-    --font-mono: 'JetBrains Mono', monospace;
+    --font-mono: var(--font-sans);
     --font-title: 'Inter', sans-serif;
     --font-logo: 'WindSong', cursive;
     --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
@@ -117,7 +117,7 @@ h3 {
 .mono-text {
     font-family: var(--font-mono);
     font-size: 0.9rem;
-    letter-spacing: -0.01em;
+    letter-spacing: 0;
 }
 
 .section-title {
@@ -155,6 +155,84 @@ main {
 
 section {
     padding: 6rem 0;
+}
+
+/* SHOWCASE */
+.showcase-heading {
+    display: block;
+    margin-bottom: 1.2rem;
+}
+
+.showcase-heading .section-title {
+    margin-bottom: 0;
+}
+
+.showcase-heading-line {
+    display: none;
+}
+
+.showcase-intro {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    line-height: 1.65;
+    margin-bottom: 2rem;
+}
+
+.showcase-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.25rem;
+}
+
+.showcase-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    min-height: 220px;
+    padding: 1.35rem;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border-color);
+    background:
+        linear-gradient(165deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.02)),
+        rgba(15, 15, 15, 0.55);
+    backdrop-filter: blur(10px);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.showcase-card:hover,
+.showcase-card:focus-visible {
+    transform: translateY(-4px);
+    border-color: var(--border-highlight);
+    box-shadow: 0 18px 36px rgba(0, 0, 0, 0.34), 0 0 36px rgba(135, 206, 235, 0.1);
+}
+
+.showcase-card-kicker {
+    color: var(--accent);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 700;
+}
+
+.showcase-card-title {
+    font-size: 1.3rem;
+    color: var(--text-primary);
+}
+
+.showcase-card-text {
+    color: var(--text-secondary);
+    font-size: 0.96rem;
+    line-height: 1.6;
+}
+
+.showcase-card-cta {
+    margin-top: auto;
+    color: var(--accent);
+    font-weight: 700;
+    font-size: 0.9rem;
 }
 
 /* HEADER */
@@ -477,15 +555,16 @@ section {
 }
 
 .hero-content h1 {
-    font-size: clamp(3rem, 8vw, 5.5rem);
+    font-size: clamp(2.35rem, 6.2vw, 4.3rem);
     margin-bottom: 1.5rem;
     letter-spacing: -0.04em;
     line-height: 1.1;
 }
 
 .hero-name {
-    font-family: var(--font-logo);
-    font-weight: 400;
+    font-family: var(--font-sans);
+    font-weight: 700;
+    letter-spacing: 0.02em;
     display: block;
     margin-bottom: 0.5rem;
     background: linear-gradient(180deg, #FFFFFF 0%, #B0B0B0 100%);
@@ -1621,6 +1700,9 @@ section {
 
     .about-content,
     .about-heading,
+    .showcase-heading,
+    .showcase-intro,
+    .showcase-grid,
     .skills-heading,
     .bento-grid,
     .timeline,
@@ -1674,6 +1756,14 @@ section {
     .bento-grid {
         grid-template-columns: 1fr;
         gap: 1rem;
+    }
+
+    .showcase-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .showcase-card {
+        min-height: 200px;
     }
 
     .bento-item {
