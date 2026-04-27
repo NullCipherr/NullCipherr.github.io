@@ -670,6 +670,10 @@ section {
     transition: var(--transition);
 }
 
+.cta-icon {
+    flex-shrink: 0;
+}
+
 .cta-primary {
     color: var(--bg-main);
     background: var(--accent);
@@ -1044,6 +1048,15 @@ section {
     margin: 1.4rem 2rem 0 2rem;
     display: flex;
     justify-content: center;
+}
+
+.section-cards-divider {
+    height: 1px;
+    margin: 1.35rem 2rem 0 2rem;
+    background: linear-gradient(90deg,
+            rgba(135, 206, 235, 0.04) 0%,
+            rgba(135, 206, 235, 0.35) 50%,
+            rgba(135, 206, 235, 0.04) 100%);
 }
 
 .projects-cta a {
