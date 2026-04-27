@@ -576,16 +576,29 @@
                 <h2 data-i18n="contact_header">Vamos conversar sobre oportunidades?</h2>
                 <p data-i18n="contact_text" class="contact-desc-new">Estou aberto a oportunidades em projetos web, backend Python e soluções com IA aplicada.</p>
                 <div class="contact-actions-new">
-                    <a href="mailto:arcodeworks@gmail.com" class="cta-button btn-email-new" data-i18n="contact_email">
-                        E-mail: arcodeworks@gmail.com
+                    <a href="mailto:arcodeworks@gmail.com" class="contact-social-link" aria-label="Enviar e-mail">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path
+                                d="M4 5a2 2 0 0 0-2 2v.35l10 5.56 10-5.56V7a2 2 0 0 0-2-2H4Zm18 4.65-9.51 5.28a1 1 0 0 1-.98 0L2 9.65V17a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9.65Z" />
+                        </svg>
+                        <span class="sr-only">E-mail</span>
+                    </a>
+                    <a href="https://br.linkedin.com/in/rvdonkey" target="_blank" rel="noopener noreferrer"
+                        class="contact-social-link" aria-label="Abrir LinkedIn">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path
+                                d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5ZM.3 8h4.4v14H.3V8Zm7.15 0h4.22v1.91h.06c.59-1.12 2.03-2.3 4.18-2.3 4.47 0 5.29 2.94 5.29 6.76V22h-4.4v-6.77c0-1.61-.03-3.69-2.25-3.69-2.25 0-2.59 1.76-2.59 3.57V22h-4.4V8Z" />
+                        </svg>
+                        <span class="sr-only">LinkedIn</span>
                     </a>
                     <a href="https://github.com/NullCipherr" target="_blank" rel="noopener noreferrer"
-                        class="cta-button btn-github-new" data-i18n="contact_github_cta">
-                        GitHub: @NullCipherr
+                        class="contact-social-link" aria-label="Abrir GitHub">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path
+                                d="M12 0c-6.63 0-12 5.37-12 12 0 5.3 3.44 9.8 8.21 11.39.6.11.79-.26.79-.58v-2.23c-3.34.73-4.03-1.42-4.03-1.42-.55-1.39-1.33-1.76-1.33-1.76-1.09-.75.08-.73.08-.73 1.21.08 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.49.99.11-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23.96-.27 1.98-.4 3-.4s2.05.13 3 .4c2.29-1.55 3.3-1.23 3.3-1.23.66 1.66.24 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.62-5.48 5.92.43.37.82 1.1.82 2.22v3.29c0 .32.19.69.8.58C20.57 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12Z" />
+                        </svg>
+                        <span class="sr-only">GitHub</span>
                     </a>
-                </div>
-                <div class="contact-meta-new">
-                    <p class="contact-location mono-text" data-i18n="contact_location">📍 Localização: Maringá, Paraná</p>
                 </div>
             </div>
         </section>
@@ -594,6 +607,55 @@
     <!-- Footer -->
     <footer class="premium-footer fade-element">
         <div class="footer-container">
+            <div class="footer-grid" aria-label="Navegação de rodapé" data-i18n-attr="aria-label:footer_nav_aria">
+                <section class="footer-panel" aria-labelledby="footer-brand-title">
+                    <h2 id="footer-brand-title" class="footer-panel-title" data-i18n="footer_brand_title">Marca</h2>
+                    <a href="#hero" class="footer-logo logo" aria-label="Andrei Costa - Início">AC.</a>
+                    <p class="footer-brand-copy" data-i18n="footer_brand_copy">
+                        Desenvolvimento full stack com foco em performance, qualidade técnica e soluções aplicadas a
+                        problemas reais.
+                    </p>
+                    <p class="footer-availability" data-i18n="footer_availability">
+                        Disponível para novos projetos e oportunidades.
+                    </p>
+                </section>
+
+                <nav class="footer-panel footer-nav" aria-labelledby="footer-nav-title">
+                    <h2 id="footer-nav-title" class="footer-panel-title" data-i18n="footer_nav_title">Navegação</h2>
+                    <ul class="footer-links-list">
+                        <li><a href="#sobre" data-i18n="nav_about">Sobre</a></li>
+                        <li><a href="#experiencia" data-i18n="nav_experience">Experiência</a></li>
+                        <li><a href="#habilidades" data-i18n="nav_skills">Habilidades</a></li>
+                        <li><a href="#projetos" data-i18n="nav_projects">Projetos</a></li>
+                        <li><a href="#conteudos" data-i18n="nav_content">Conteúdo</a></li>
+                        <li><a href="#faq" data-i18n="nav_faq">FAQ</a></li>
+                    </ul>
+                </nav>
+
+                <nav class="footer-panel footer-nav" aria-labelledby="footer-content-title">
+                    <h2 id="footer-content-title" class="footer-panel-title" data-i18n="footer_content_title">Conteúdo</h2>
+                    <ul class="footer-links-list">
+                        <li><a href="#showcase" data-i18n="showcase_title">Showcase</a></li>
+                        <li><a href="blog/index.html" data-i18n="content_blog_cta">Ir para o Blog Técnico</a></li>
+                        <li><a href="https://github.com/NullCipherr?tab=repositories" target="_blank"
+                                rel="noopener noreferrer" data-i18n="projects_blog_cta">Ver meus repositórios no GitHub</a></li>
+                        <li><a href="https://github.com/NullCipherr/portfolio-blog" target="_blank"
+                                rel="noopener noreferrer">portfolio-blog</a></li>
+                    </ul>
+                </nav>
+
+                <section class="footer-panel" aria-labelledby="footer-contact-title">
+                    <h2 id="footer-contact-title" class="footer-panel-title" data-i18n="footer_contact_title">Contato Direto</h2>
+                    <div class="footer-contact-links">
+                        <a href="mailto:arcodeworks@gmail.com">arcodeworks@gmail.com</a>
+                        <a href="https://br.linkedin.com/in/rvdonkey" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                        <a href="https://github.com/NullCipherr" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    </div>
+                </section>
+            </div>
+
+            <div class="footer-note-divider" aria-hidden="true"></div>
+
             <div class="footer-tech-note">
                 <p data-i18n="footer_tech_note">
                     "Desenvolvido com HTML5, CSS3 e Vanilla JS — Performance máxima."
