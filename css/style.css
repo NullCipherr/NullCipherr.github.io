@@ -1911,3 +1911,115 @@ section {
         display: none;
     }
 }
+
+/* NEW CONTACT CARD RE-DESIGN */
+.contact-card-new {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(180deg, rgba(8, 8, 8, 1) 0%, rgba(15, 15, 15, 1) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 3rem 2rem 5rem 2rem;
+    position: relative;
+    box-shadow: 0 40px 60px rgba(0, 0, 0, 0.5);
+    overflow: visible;
+    /* Override hidden to allow image to escape if needed */
+    margin-top: 4rem;
+    /* Give space for the image sticking out */
+}
+
+.contact-hero-image {
+    max-width: 450px;
+    width: 100%;
+    height: auto;
+    margin-top: -12rem;
+    /* Adjusted to be higher as requested */
+    margin-bottom: 2rem;
+    filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.8));
+    position: relative;
+    z-index: 10;
+}
+
+.contact-card-new h2 {
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 1rem;
+    z-index: 10;
+}
+
+.contact-desc-new {
+    color: #aaaaaa;
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto 2.5rem auto;
+    text-align: center;
+    z-index: 10;
+}
+
+.contact-actions-new {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    width: 100%;
+    z-index: 10;
+}
+
+.btn-email-new {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    border-radius: 100px !important;
+    padding: 1rem 2rem !important;
+    font-weight: 700 !important;
+    text-decoration: none !important;
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2) !important;
+    border: none !important;
+    display: flex;
+    align-items: center;
+}
+
+.btn-email-new:hover {
+    background-color: #e0e0e0 !important;
+    color: #000000 !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.3) !important;
+}
+
+.btn-github-new {
+    background-color: transparent !important;
+    color: #ffffff !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    border-radius: 100px !important;
+    padding: 1rem 2rem !important;
+    font-weight: 600 !important;
+    text-decoration: none !important;
+    display: flex;
+    align-items: center;
+}
+
+.btn-github-new:hover {
+    background-color: rgba(255, 255, 255, 0.05) !important;
+    border-color: rgba(255, 255, 255, 0.5) !important;
+    transform: translateY(-2px);
+}
+
+.contact-meta-new {
+    margin-top: 3rem;
+    z-index: 10;
+}
+
+@media (max-width: 768px) {
+    .contact-actions-new {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn-email-new,
+    .btn-github-new {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+        max-width: 300px;
+    }
+}
