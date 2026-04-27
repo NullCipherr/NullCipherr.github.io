@@ -3,100 +3,18 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="0;url=../post.html?slug=mercury-server-zig-http11">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Mercury Server: decisões de arquitetura low-level em Zig para HTTP/1.1 com parser manual, pool de conexões e métricas operacionais.">
-    <meta name="robots" content="index, follow">
-    <title>Mercury Server: arquitetura low-level de HTTP/1.1 em Zig | Andrei Costa</title>
-    <link rel="canonical" href="https://nullcipherr.github.io/blog/artigos/mercury-server-zig-http11.html">
-    <meta property="og:type" content="article">
-    <meta property="og:title" content="Mercury Server: arquitetura low-level de HTTP/1.1 em Zig">
-    <meta property="og:description"
-        content="Parser manual, connection pooling, métricas em tempo real e benchmark oficial do Mercury Server.">
-    <meta property="og:url" content="https://nullcipherr.github.io/blog/artigos/mercury-server-zig-http11.html">
-    <meta property="og:image" content="https://nullcipherr.github.io/assets/images/hero-bg.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=JetBrains+Mono:wght@400;700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="../../css/blog.css">
-    <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@type": "BlogPosting",
-            "headline": "Mercury Server: arquitetura low-level de HTTP/1.1 em Zig",
-            "author": {
-                "@type": "Person",
-                "name": "Andrei Costa"
-            },
-            "publisher": {
-                "@type": "Person",
-                "name": "Andrei Costa"
-            },
-            "datePublished": "2026-04-09",
-            "dateModified": "2026-04-09",
-            "mainEntityOfPage": "https://nullcipherr.github.io/blog/artigos/mercury-server-zig-http11.html"
-        }
+    <title>Redirecionando... | Andrei Costa</title>
+    <link rel="canonical" href="https://nullcipherr.github.io/blog/post.html?slug=mercury-server-zig-http11">
+    <script>
+        window.location.replace("../post.html?slug=mercury-server-zig-http11");
     </script>
 </head>
 
 <body>
-    <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
-
-    <header class="blog-header">
-        <nav class="blog-nav" aria-label="Navegação do artigo">
-            <a href="../../index.html">Andrei Costa</a>
-            <div>
-                <a href="../index.html">Blog</a>
-                <a href="../../index.html#projetos">Projetos</a>
-                <a href="../../index.html#contato">Contato</a>
-            </div>
-        </nav>
-    </header>
-
-    <main id="main-content">
-        <article>
-            <p class="kicker">PROJETO: MERCURY SERVER</p>
-            <h1>Mercury Server: arquitetura low-level de HTTP/1.1 em Zig</h1>
-            <p class="article-meta">Publicado em 09/04/2026 • Leitura estimada: 6 min</p>
-
-            <p>
-                O Mercury Server nasceu com um objetivo direto: entregar previsibilidade operacional em um servidor
-                HTTP/1.1 com baixo overhead e controle explícito de recursos. Em vez de abstrações pesadas, a base usa
-                parser manual, workers fixos e métricas para guiar evolução incremental.
-            </p>
-
-            <h2>Decisões centrais de engenharia</h2>
-            <ul>
-                <li>Parser HTTP escrito manualmente para controlar limites de cabeçalho/corpo.</li>
-                <li>Pool thread-safe para desacoplar <code>accept</code> do processamento.</li>
-                <li>Timeout de leitura/escrita por conexão para reduzir risco de conexões presas.</li>
-                <li>Endpoint <code>/metrics</code> para visibilidade de requests, erros e latência média.</li>
-                <li>Proteção contra path traversal no servidor de arquivos estáticos.</li>
-            </ul>
-
-            <h2>Benchmark como ferramenta de produto</h2>
-            <p>
-                O benchmark oficial do projeto serve como referência de maturidade técnica, não como comparação
-                superficial. O foco está em estabilidade de comportamento com parâmetros explícitos de carga e geração
-                de artefatos reproduzíveis em <code>benchmarks/results/</code>.
-            </p>
-
-            <section class="interlink-box" aria-label="Leituras relacionadas">
-                <h3>Interlinks recomendados</h3>
-                <ul>
-                    <li><a class="link" href="https://github.com/NullCipherr/Mercury-Server" target="_blank" rel="noopener noreferrer">Repositório: Mercury Server</a></li>
-                    <li><a class="link" href="grit-engine-webgl2-realtime.html">Próxima leitura: GRIT Engine e simulação em tempo real</a></li>
-                    <li><a class="link" href="../../index.html#contato">CTA: iniciar projeto de backend/performance</a></li>
-                </ul>
-            </section>
-
-            <footer>
-                Artigo técnico conectado ao projeto Mercury Server.
-            </footer>
-        </article>
-    </main>
+    <p>Redirecionando para o novo artigo...</p>
+    <p><a href="../post.html?slug=mercury-server-zig-http11">Clique aqui se o redirecionamento não acontecer.</a></p>
 </body>
 
 </html>

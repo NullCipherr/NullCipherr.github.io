@@ -21,6 +21,7 @@ Related repositories:
 - [portfolio-os](https://github.com/NullCipherr/portfolio-os)
 - [portfolio-terminal](https://github.com/NullCipherr/portfolio-terminal)
 - [portfolio-content](https://github.com/NullCipherr/portfolio-content)
+- [portfolio-blog](https://github.com/NullCipherr/portfolio-blog)
 
 ---
 
@@ -46,6 +47,8 @@ The project prioritizes:
 - Built-in i18n workflow with locale JSON dictionaries;
 - Technical content strategy through pillar articles and blog navigation.
 
+Blog content is now consumed from the external `portfolio-blog` repository through GitHub Raw URLs.
+
 ---
 
 ## Features
@@ -53,7 +56,7 @@ The project prioritizes:
 - **Bilingual interface** with runtime switch (`pt-BR` and `en`).
 - **Hero + showcase flow** with direct navigation to portfolio variants.
 - **Structured sections** for experience, skills, projects, content, FAQ, and contact.
-- **Technical blog** with dedicated hub and article pages.
+- **Technical blog** with external CMS data (`portfolio-blog`) and dynamic article rendering.
 - **Performance-minded media loading** for hero background video/image.
 - **SEO foundation** with metadata, Open Graph, robots, sitemap, and JSON-LD schema.
 
@@ -67,9 +70,11 @@ High-level application flow:
 2. `css/style.css` provides the global design system and responsive behavior.
 3. `js/script.js` controls interactions (mobile menu, smooth scroll, observer effects, i18n, hero media strategy).
 4. `locales/*.json` stores translation keys and copy contracts.
-5. `blog/index.html` and `blog/artigos/*.html` provide content distribution and internal linking.
-6. `robots.txt` and `sitemap.xml` support crawl/index pipelines.
-7. `404.html` handles invalid routes in static hosting.
+5. `blog/index.html` loads article metadata from `https://raw.githubusercontent.com/NullCipherr/portfolio-blog/main/posts/index.json`.
+6. `blog/post.html` resolves `slug` and renders Markdown from `portfolio-blog/posts/*.md`.
+7. Legacy paths in `blog/artigos/*.html` redirect to the new dynamic route for backward compatibility.
+8. `robots.txt` and `sitemap.xml` support crawl/index pipelines.
+9. `404.html` handles invalid routes in static hosting.
 
 ---
 
@@ -122,12 +127,15 @@ Current optimization choices:
 │   └── videos/
 ├── blog/
 │   ├── index.html
-│   └── artigos/
+│   ├── post.html
+│   └── artigos/  (legacy redirects)
 ├── css/
 │   ├── style.css
 │   └── blog.css
 ├── js/
-│   └── script.js
+│   ├── script.js
+│   ├── blog-index.js
+│   └── blog-post.js
 ├── locales/
 │   ├── pt-br.json
 │   └── en.json

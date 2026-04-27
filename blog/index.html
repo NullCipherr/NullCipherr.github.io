@@ -52,30 +52,17 @@
             </div>
         </section>
 
+        <section class="status-message" id="blog-status" aria-live="polite">
+            Carregando artigos do CMS central...
+        </section>
+
         <section class="featured-layout" aria-label="Destaque editorial">
-            <article class="featured-article">
-                <p class="kicker">ARTIGO EM DESTAQUE</p>
-                <h2>Mercury Server: arquitetura low-level de HTTP/1.1 em Zig</h2>
-                <p>
-                    Um guia direto sobre parser manual, connection pooling, timeouts por socket e observabilidade de
-                    latência para construir um servidor previsível.
-                </p>
-                <div class="featured-meta">
-                    <span>Zig 0.14+</span>
-                    <span>HTTP/1.1</span>
-                    <span>Performance</span>
-                </div>
-                <a class="featured-link" href="artigos/mercury-server-zig-http11.html">Ler artigo em destaque</a>
-            </article>
+            <article class="featured-article" id="featured-article"></article>
 
             <aside class="featured-side" aria-label="Resumo do blog">
                 <h3>Guia de leitura</h3>
                 <p>Explore artigos por projeto para entender como cada stack foi desenhada, validada e evoluída.</p>
-                <ul>
-                    <li>Mercury Server: backend low-level e benchmark.</li>
-                    <li>GRIT Engine: simulação visual em escala com WebGL2.</li>
-                    <li>Airport Bus: domínio operacional com eventos realtime.</li>
-                </ul>
+                <ul id="guide-list"></ul>
                 <a class="link" href="../index.html#projetos">Ver projetos no portfólio</a>
             </aside>
         </section>
@@ -86,29 +73,7 @@
                 <a class="link" href="../index.html#contato">Sugerir tema</a>
             </div>
 
-            <div class="grid" aria-label="Lista de artigos">
-                <article class="card">
-                    <p class="meta">Projeto: Mercury Server • Leitura: 6 min</p>
-                    <h3>Mercury Server: arquitetura low-level de HTTP/1.1 em Zig</h3>
-                    <p>Como estruturar parser manual, workers fixos e métricas para reduzir incerteza operacional.</p>
-                    <a href="artigos/mercury-server-zig-http11.html">Ler artigo</a>
-                </article>
-
-                <article class="card">
-                    <p class="meta">Projeto: GRIT Engine • Leitura: 6 min</p>
-                    <h3>GRIT Engine: simulação de partículas WebGL2 em alta escala</h3>
-                    <p>Estratégias de spatial hashing, instancing GPU e controle de budget adaptativo em tempo real.
-                    </p>
-                    <a href="artigos/grit-engine-webgl2-realtime.html">Ler artigo</a>
-                </article>
-
-                <article class="card">
-                    <p class="meta">Projeto: Airport Bus • Leitura: 6 min</p>
-                    <h3>Airport Bus: operações aeroportuárias realtime com Phoenix e Vue</h3>
-                    <p>Autenticação stateless, contexto Ops e sincronização de UI sem refresh via Channels.</p>
-                    <a href="artigos/airport-bus-phoenix-realtime.html">Ler artigo</a>
-                </article>
-            </div>
+            <div class="grid" aria-label="Lista de artigos" id="articles-grid"></div>
         </section>
 
         <section class="editorial" aria-label="Trilhas editoriais">
@@ -133,6 +98,8 @@
             </p>
         </section>
     </main>
+
+    <script src="../js/blog-index.js" defer></script>
 </body>
 
 </html>

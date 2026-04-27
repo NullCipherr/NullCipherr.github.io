@@ -118,6 +118,22 @@ main {
     margin-bottom: 1rem;
 }
 
+.status-message {
+    margin-bottom: 1rem;
+    border: 1px solid rgba(135, 206, 235, 0.28);
+    border-radius: var(--radius-md);
+    padding: 0.75rem 0.9rem;
+    background: rgba(135, 206, 235, 0.08);
+    color: var(--text-secondary);
+    font-size: 0.92rem;
+}
+
+.status-message.is-error {
+    border-color: rgba(255, 125, 125, 0.44);
+    background: rgba(255, 125, 125, 0.09);
+    color: #ffd6d6;
+}
+
 .blog-topics {
     margin-top: 1.1rem;
     display: flex;
@@ -346,6 +362,11 @@ main > article ul {
     color: var(--text-secondary);
 }
 
+main > article ol {
+    margin: 0.75rem 0 0.75rem 1.2rem;
+    color: var(--text-secondary);
+}
+
 main > article li + li {
     margin-top: 0.35rem;
 }
@@ -379,6 +400,46 @@ footer {
     border-top: 1px solid var(--border-color);
     color: var(--text-muted);
     font-size: 0.85rem;
+}
+
+.markdown-content p + p {
+    margin-top: 0.8rem;
+}
+
+.markdown-content h2,
+.markdown-content h3 {
+    margin-top: 1.3rem;
+}
+
+.markdown-content a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.markdown-content a:hover {
+    text-decoration: underline;
+}
+
+.markdown-content code {
+    font-family: var(--font-mono);
+    background: rgba(255, 255, 255, 0.08);
+    padding: 0.1rem 0.3rem;
+    border-radius: 4px;
+}
+
+.markdown-content pre {
+    margin: 0.85rem 0;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 0.75rem;
+    overflow-x: auto;
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.markdown-content pre code {
+    background: transparent;
+    padding: 0;
 }
 
 @media (max-width: 680px) {
