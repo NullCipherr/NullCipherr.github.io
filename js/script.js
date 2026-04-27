@@ -287,6 +287,43 @@
     };
 
     /**
+     * Filtra a timeline de experiência por período sem remover conteúdo do DOM.
+     */
+    const initExperienceFilters = () => {
+        const filterButtons = document.querySelectorAll('[data-experience-filter]');
+        const timelineItems = document.querySelectorAll('[data-experience-years]');
+
+        if (!filterButtons.length || !timelineItems.length) return;
+
+        const applyFilter = (filter) => {
+            timelineItems.forEach(item => {
+                const years = (item.getAttribute('data-experience-years') || '').split(/\s+/);
+                const shouldShow = filter === 'all' || years.includes(filter);
+
+                item.classList.remove('is-revealing');
+                item.hidden = !shouldShow;
+                item.classList.toggle('is-filtered-out', !shouldShow);
+
+                if (shouldShow && !prefersReducedMotion) {
+                    requestAnimationFrame(() => item.classList.add('is-revealing'));
+                }
+            });
+
+            filterButtons.forEach(button => {
+                const isActive = button.getAttribute('data-experience-filter') === filter;
+                button.classList.toggle('is-active', isActive);
+                button.setAttribute('aria-pressed', String(isActive));
+            });
+        };
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                applyFilter(button.getAttribute('data-experience-filter') || 'all');
+            });
+        });
+    };
+
+    /**
      * Gerencia a tradução do site (I18n)
      */
     const initI18n = async () => {
@@ -405,6 +442,7 @@
         setCurrentYear();
         initHeroVideo();
         initHeaderScroll();
+        initExperienceFilters();
         initI18n();
     };
 

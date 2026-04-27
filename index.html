@@ -150,6 +150,7 @@
                 <span class="hero-proof-item" data-i18n="hero_proof_2">Experiência profissional desde 2017</span>
                 <span class="hero-proof-item" data-i18n="hero_proof_3">React, Node.js, Python e IA aplicada</span>
             </div>
+            <div class="hero-actions-divider" aria-hidden="true"></div>
             <div class="social-links">
                 <a href="#projetos" class="cta-secondary">
                     <svg class="cta-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"
@@ -260,8 +261,29 @@
         <!-- Experiência Section -->
         <section id="experiencia" class="fade-element">
             <h2 class="section-title" data-i18n="experience_title">Experiência Profissional</h2>
+            <div class="experience-filters" role="toolbar" aria-label="Filtrar experiência por período"
+                data-i18n-attr="aria-label:experience_filters_aria">
+                <button class="experience-filter is-active" type="button" data-experience-filter="all"
+                    aria-pressed="true">
+                    <span data-i18n="experience_filter_all">Todos</span>
+                </button>
+                <button class="experience-filter" type="button" data-experience-filter="current"
+                    aria-pressed="false">
+                    <span data-i18n="experience_filter_current">Atual</span>
+                </button>
+                <button class="experience-filter" type="button" data-experience-filter="recent" aria-pressed="false">
+                    <span data-i18n="experience_filter_recent">2022+</span>
+                </button>
+                <button class="experience-filter" type="button" data-experience-filter="game-freelance"
+                    aria-pressed="false">
+                    <span data-i18n="experience_filter_game_freelance">2021 - 2023</span>
+                </button>
+                <button class="experience-filter" type="button" data-experience-filter="ast" aria-pressed="false">
+                    <span data-i18n="experience_filter_ast">2017 - 2021</span>
+                </button>
+            </div>
             <div class="timeline">
-                <div class="timeline-item">
+                <div class="timeline-item" data-experience-years="current recent">
                     <div class="timeline-date mono-text" data-i18n="experience_date_now">Atual</div>
                     <div class="timeline-content">
                         <h3 data-i18n="exp1_title">Desenvolvedor Freelancer | Backend Python</h3>
@@ -272,7 +294,7 @@
                             Computacional, Séries Temporais) usando TensorFlow e PyTorch.</p>
                     </div>
                 </div>
-                <div class="timeline-item">
+                <div class="timeline-item" data-experience-years="current recent">
                     <div class="timeline-content">
                         <div class="timeline-date mono-text" data-i18n="experience_date_fullstack">07/2022 - Atual</div>
                         <h3 data-i18n="exp2_title">Desenvolvedor Freelancer | Full Stack</h3>
@@ -282,7 +304,7 @@
                             Tailwind CSS.</p>
                     </div>
                 </div>
-                <div class="timeline-item">
+                <div class="timeline-item" data-experience-years="game-freelance">
                     <div class="timeline-content">
                         <div class="timeline-date mono-text" data-i18n="experience_date_game_freelance">02/2021 - 06/2023</div>
                         <h3 data-i18n="exp3_title">Desenvolvedor Freelancer | Game Developer</h3>
@@ -293,7 +315,7 @@
                             alta precisão.</p>
                     </div>
                 </div>
-                <div class="timeline-item">
+                <div class="timeline-item" data-experience-years="ast">
                     <div class="timeline-content">
                         <div class="timeline-date mono-text" data-i18n="experience_date_ast">12/2017 - 02/2021</div>
                         <h3 data-i18n="exp4_title">Desenvolvedor de Games</h3>
@@ -495,31 +517,52 @@
             <h2 class="section-title" data-i18n="faq_title">Perguntas Frequentes</h2>
             <div class="faq-list">
                 <details class="faq-item">
-                    <summary data-i18n="faq_q1">Quais tipos de projeto você desenvolve?</summary>
+                    <summary data-i18n="faq_q1">Por que este portfólio está publicado no GitHub?</summary>
                     <p data-i18n="faq_a1">
-                        Atuo em aplicações web full stack, backend em Python com APIs e automação orientada a dados,
-                        além de sistemas para games em Unreal/Unity.
+                        Porque o GitHub funciona como vitrine técnica e histórico público de evolução: além da
+                        interface, é possível ver repositórios, decisões de arquitetura e organização do código.
                     </p>
                 </details>
                 <details class="faq-item">
-                    <summary data-i18n="faq_q2">Como funciona seu processo de trabalho?</summary>
+                    <summary data-i18n="faq_q2">O conteúdo do blog depende de redeploy do portfólio?</summary>
                     <p data-i18n="faq_a2">
-                        Inicio com entendimento de requisitos, sigo com prototipação técnica, desenvolvimento iterativo
-                        e entregas incrementais com validação contínua.
+                        Não. Os artigos vivem no repositório portfolio-blog e são consumidos por fetch via GitHub Raw,
+                        permitindo atualizar conteúdo sem republicar todos os portfólios.
                     </p>
                 </details>
                 <details class="faq-item">
-                    <summary data-i18n="faq_q3">Você trabalha com APIs e integrações?</summary>
+                    <summary data-i18n="faq_q3">Os projetos aqui são apenas demonstrações visuais?</summary>
                     <p data-i18n="faq_a3">
-                        Sim. Tenho experiência com APIs REST, integrações de serviços e estruturação de camadas de
-                        dados para aplicações escaláveis.
+                        Não. A proposta é mostrar raciocínio de engenharia: estrutura de pastas, documentação, dados
+                        externos, integração com GitHub como CMS e preocupação com manutenção.
                     </p>
                 </details>
                 <details class="faq-item">
-                    <summary data-i18n="faq_q4">Como posso iniciar um projeto com você?</summary>
+                    <summary data-i18n="faq_q4">Posso avaliar seu código diretamente pelos repositórios?</summary>
                     <p data-i18n="faq_a4">
-                        Entre em contato por e-mail com o contexto do projeto. Retorno com os próximos
-                        passos e proposta de execução.
+                        Sim. Sempre que possível, mantenho os repositórios organizados para leitura técnica, com README,
+                        estrutura clara e separação entre interface, conteúdo e dados.
+                    </p>
+                </details>
+                <details class="faq-item">
+                    <summary data-i18n="faq_q5">Como o GitHub é usado como CMS neste portfólio?</summary>
+                    <p data-i18n="faq_a5">
+                        O conteúdo bruto fica em repositórios dedicados, como portfolio-blog, e os portfólios consomem
+                        arquivos JSON e Markdown pelas URLs Raw do GitHub.
+                    </p>
+                </details>
+                <details class="faq-item">
+                    <summary data-i18n="faq_q6">Esse modelo é escalável para outros portfólios?</summary>
+                    <p data-i18n="faq_a6">
+                        Sim. Como o conteúdo está desacoplado da interface, outros layouts podem consumir os mesmos
+                        dados sem duplicar posts ou depender de um build central.
+                    </p>
+                </details>
+                <details class="faq-item">
+                    <summary data-i18n="faq_q7">Como entrar em contato para oportunidades ou colaboração?</summary>
+                    <p data-i18n="faq_a7">
+                        Use o e-mail ou GitHub no bloco de contato. Contexto do projeto, objetivo e prazo ajudam a
+                        responder com próximos passos mais claros.
                     </p>
                 </details>
             </div>

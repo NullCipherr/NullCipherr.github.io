@@ -38,10 +38,12 @@
   function renderFeatured(post) {
     const tags = Array.isArray(post.tags) ? post.tags : [];
     const tagHtml = tags.map((tag) => `<span>${tag}</span>`).join("");
+    const meta = `${post.project || "Projeto"} / ${post.readingTime || "Leitura livre"} / ${formatDate(post.publishedAt)}`;
 
     featuredEl.innerHTML = `
-      <p class="kicker">ARTIGO EM DESTAQUE</p>
+      <p class="kicker">ARTIGO PRINCIPAL</p>
       <h2>${post.title}</h2>
+      <p class="featured-date">${meta}</p>
       <p>${post.excerpt || ""}</p>
       <div class="featured-meta">${tagHtml}</div>
       <a class="featured-link" href="${postUrl(post.slug)}">Ler artigo em destaque</a>
@@ -50,10 +52,11 @@
 
   function renderCards(posts) {
     gridEl.innerHTML = posts
-      .map((post) => {
+      .map((post, index) => {
         const meta = `Projeto: ${post.project || "N/A"} • Leitura: ${post.readingTime || "N/A"}`;
         return `
           <article class="card">
+            <span class="card-index">${String(index + 1).padStart(2, "0")}</span>
             <p class="meta">${meta}</p>
             <h3>${post.title}</h3>
             <p>${post.excerpt || ""}</p>
@@ -67,7 +70,7 @@
   function renderGuide(posts) {
     guideEl.innerHTML = posts
       .slice(0, 3)
-      .map((post) => `<li>${post.project || post.title} (${formatDate(post.publishedAt)})</li>`)
+      .map((post) => `<li><span>${post.project || post.title}</span><small>${formatDate(post.publishedAt)}</small></li>`)
       .join("");
   }
 
@@ -98,7 +101,7 @@
       renderFeatured(featured);
       renderCards(posts);
       renderGuide(posts);
-      setStatus(`Conteúdo sincronizado do CMS central (${posts.length} posts).`, false);
+      setStatus(`CMS sincronizado: ${posts.length} artigos publicados em portfolio-blog.`, false);
     } catch (error) {
       featuredEl.innerHTML = "<p>Não foi possível carregar o artigo em destaque neste momento.</p>";
       gridEl.innerHTML = "";

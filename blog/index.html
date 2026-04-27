@@ -7,10 +7,10 @@
     <meta name="description"
         content="Biblioteca de artigos técnicos conectada aos projetos Mercury Server, GRIT Engine e Airport Bus.">
     <meta name="robots" content="index, follow">
-    <title>Blog Técnico | Andrei Costa</title>
+    <title>Field Notes | Blog Técnico de Andrei Costa</title>
     <link rel="canonical" href="https://nullcipherr.github.io/blog/">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Blog Técnico | Andrei Costa">
+    <meta property="og:title" content="Field Notes | Blog Técnico de Andrei Costa">
     <meta property="og:description"
         content="Artigos estratégicos conectados aos principais projetos de engenharia: Mercury Server, GRIT Engine e Airport Bus.">
     <meta property="og:url" content="https://nullcipherr.github.io/blog/">
@@ -31,6 +31,7 @@
         <nav class="blog-nav" aria-label="Navegação do blog">
             <a href="../index.html" class="logo" aria-label="Andrei Costa - Início">AC.</a>
             <div>
+                <a href="../index.html">Portfólio</a>
                 <a href="../index.html#projetos">Projetos</a>
                 <a href="../index.html#contato">Contato</a>
             </div>
@@ -39,12 +40,19 @@
 
     <main id="main-content">
         <section class="hero blog-hero">
-            <p class="kicker">ENGENHARIA APLICADA</p>
-            <h1>Blog Técnico de Arquitetura, Performance e Realtime</h1>
-            <p>
-                Conteúdo escrito a partir de projetos reais em produção, com foco em decisões arquiteturais, trade-offs
-                técnicos e execução orientada a resultado.
-            </p>
+            <div class="hero-copy">
+                <p class="kicker">FIELD NOTES / ANDREI COSTA</p>
+                <h1>Notas técnicas de arquitetura, performance e sistemas em tempo real.</h1>
+                <p>
+                    Um diário público de engenharia: decisões, trade-offs e aprendizados extraídos dos projetos que
+                    aparecem no meu portfólio.
+                </p>
+            </div>
+            <aside class="hero-panel" aria-label="Resumo editorial">
+                <span>CMS</span>
+                <strong>GitHub Raw</strong>
+                <p>Posts independentes de build, sincronizados direto do repositório <code>portfolio-blog</code>.</p>
+            </aside>
             <div class="blog-topics" aria-label="Temas principais do blog">
                 <a href="#ultimos-artigos">Backend low-level</a>
                 <a href="#ultimos-artigos">Renderização WebGL2</a>
@@ -53,15 +61,16 @@
         </section>
 
         <section class="status-message" id="blog-status" aria-live="polite">
-            Carregando artigos do CMS central...
+            Sincronizando artigos do CMS central...
         </section>
 
         <section class="featured-layout" aria-label="Destaque editorial">
             <article class="featured-article" id="featured-article"></article>
 
             <aside class="featured-side" aria-label="Resumo do blog">
-                <h3>Guia de leitura</h3>
-                <p>Explore artigos por projeto para entender como cada stack foi desenhada, validada e evoluída.</p>
+                <p class="kicker">MAPA DE LEITURA</p>
+                <h3>Do projeto para a decisão técnica</h3>
+                <p>Leia por stack, mas repare principalmente no raciocínio por trás de cada escolha.</p>
                 <ul id="guide-list"></ul>
                 <a class="link" href="../index.html#projetos">Ver projetos no portfólio</a>
             </aside>
@@ -69,7 +78,7 @@
 
         <section id="ultimos-artigos" class="latest-section" aria-label="Últimos artigos">
             <div class="section-head">
-                <h2>Últimos Artigos</h2>
+                <h2>Últimos artigos</h2>
                 <a class="link" href="../index.html#contato">Sugerir tema</a>
             </div>
 
@@ -77,7 +86,8 @@
         </section>
 
         <section class="editorial" aria-label="Trilhas editoriais">
-            <h2>Trilhas Editoriais</h2>
+            <p class="kicker">TRILHAS EDITORIAIS</p>
+            <h2>O blog acompanha o repertório do portfólio.</h2>
             <p>Cada trilha aprofunda um problema técnico real e conecta conteúdo com implementação prática.</p>
             <div class="trail-grid">
                 <article class="trail-card">
