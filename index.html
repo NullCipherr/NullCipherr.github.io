@@ -42,7 +42,6 @@
     <link href="https://fonts.googleapis.com/css2?family=WindSong:wght@400;500&display=swap" rel="stylesheet">
     <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
     <link rel="preload" as="image" href="assets/images/Background.webp" type="image/webp" fetchpriority="high">
-    <link rel="preload" as="image" href="assets/images/Background.png" fetchpriority="high">
 
     <!-- Styles -->
     <link rel="stylesheet" href="css/style.css?v=20260427-contact-image-fix">
@@ -193,27 +192,55 @@
             </p>
 
             <div class="showcase-grid">
-                <a href="https://nullcipherr.github.io/portfolio-os/" target="_blank" rel="noopener noreferrer"
-                    class="showcase-card">
+                <article class="showcase-card">
                     <span class="showcase-card-kicker mono-text" data-i18n="showcase_os_kicker">Desktop
                         Experience</span>
                     <h3 class="showcase-card-title">portfolio-os</h3>
                     <p class="showcase-card-text" data-i18n="showcase_os_desc">
                         Interface inspirada em sistema operacional com janelas, apps e navegação por desktop.
                     </p>
-                    <span class="showcase-card-cta" data-i18n="showcase_card_cta">Abrir versão</span>
-                </a>
+                    <div class="showcase-card-actions">
+                        <a href="https://nullcipherr.github.io/portfolio-os/" target="_blank" rel="noopener noreferrer"
+                            class="showcase-icon-btn" aria-label="Abrir versão portfolio-os">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path d="M8 5v14l11-7-11-7Z"></path>
+                            </svg>
+                            <span data-i18n="showcase_card_cta">Abrir versão</span>
+                        </a>
+                        <a href="https://github.com/NullCipherr/portfolio-os" target="_blank" rel="noopener noreferrer"
+                            class="showcase-icon-btn showcase-icon-btn-muted" data-i18n-title="showcase_info_cta"
+                            title="Ver informações do projeto no GitHub" aria-label="Ver informações do projeto no GitHub">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path d="M12 2a10 10 0 1 0 10 10A10.01 10.01 0 0 0 12 2Zm0 4a1.25 1.25 0 1 1-1.25 1.25A1.25 1.25 0 0 1 12 6Zm1.6 11h-3.2a1 1 0 0 1 0-2H11v-3h-.6a1 1 0 0 1 0-2H12a1 1 0 0 1 1 1v4h.6a1 1 0 0 1 0 2Z"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </article>
 
-                <a href="https://nullcipherr.github.io/portfolio-terminal/" target="_blank" rel="noopener noreferrer"
-                    class="showcase-card">
+                <article class="showcase-card">
                     <span class="showcase-card-kicker mono-text" data-i18n="showcase_terminal_kicker">Terminal
                         Experience</span>
                     <h3 class="showcase-card-title">portfolio-terminal</h3>
                     <p class="showcase-card-text" data-i18n="showcase_terminal_desc">
                         Portfólio orientado a comandos com foco em velocidade, leitura técnica e interação em shell.
                     </p>
-                    <span class="showcase-card-cta" data-i18n="showcase_card_cta">Abrir versão</span>
-                </a>
+                    <div class="showcase-card-actions">
+                        <a href="https://nullcipherr.github.io/portfolio-terminal/" target="_blank" rel="noopener noreferrer"
+                            class="showcase-icon-btn" aria-label="Abrir versão portfolio-terminal">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path d="M8 5v14l11-7-11-7Z"></path>
+                            </svg>
+                            <span data-i18n="showcase_card_cta">Abrir versão</span>
+                        </a>
+                        <a href="https://github.com/NullCipherr/portfolio-terminal" target="_blank" rel="noopener noreferrer"
+                            class="showcase-icon-btn showcase-icon-btn-muted" data-i18n-title="showcase_info_cta"
+                            title="Ver informações do projeto no GitHub" aria-label="Ver informações do projeto no GitHub">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path d="M12 2a10 10 0 1 0 10 10A10.01 10.01 0 0 0 12 2Zm0 4a1.25 1.25 0 1 1-1.25 1.25A1.25 1.25 0 0 1 12 6Zm1.6 11h-3.2a1 1 0 0 1 0-2H11v-3h-.6a1 1 0 0 1 0-2H12a1 1 0 0 1 1 1v4h.6a1 1 0 0 1 0 2Z"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </article>
             </div>
         </section>
 
@@ -635,7 +662,7 @@
                 <section class="footer-panel" aria-labelledby="footer-contact-title">
                     <h2 id="footer-contact-title" class="footer-panel-title" data-i18n="footer_contact_title">Contato Direto</h2>
                     <div class="footer-contact-links">
-                        <a href="mailto:arcodeworks@gmail.com">arcodeworks@gmail.com</a>
+                        <a href="mailto:arcodeworks@gmail.com">Email</a>
                         <a href="https://br.linkedin.com/in/rvdonkey" target="_blank" rel="noopener noreferrer">LinkedIn</a>
                         <a href="https://github.com/NullCipherr" target="_blank" rel="noopener noreferrer">GitHub</a>
                     </div>
