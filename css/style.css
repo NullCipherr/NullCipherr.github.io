@@ -1194,6 +1194,7 @@ section {
     border: 1px solid var(--border-color);
     border-radius: var(--radius-lg);
     padding: 1.4rem;
+    min-height: 290px;
     background: linear-gradient(180deg, rgba(20, 20, 20, 0.45) 0%, rgba(10, 10, 10, 0.72) 100%);
     display: flex;
     flex-direction: column;
@@ -1216,18 +1217,27 @@ section {
 
 .content-card a {
     display: inline-flex;
-    margin-top: auto;
-    padding-top: 0.95rem;
+    align-items: center;
+    padding: 0.35rem 0.7rem;
     color: var(--accent);
     text-decoration: none;
     font-weight: 700;
-    border-bottom: 1px solid transparent;
+    font-size: 0.9rem;
+    border: 1px solid var(--border-color);
+    border-radius: 999px;
     transition: var(--transition);
-    align-self: flex-start;
 }
 
 .content-card a:hover {
-    border-bottom-color: var(--accent);
+    border-color: var(--accent);
+}
+
+.content-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.7rem;
+    margin-top: auto;
+    padding-top: 1rem;
 }
 
 .editorial-calendar-card {
@@ -2115,6 +2125,29 @@ section {
         padding: 0;
     }
 
+    #faq .faq-shell {
+        width: 100%;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        gap: 1rem;
+    }
+
+    #faq .faq-header {
+        gap: 0.8rem;
+    }
+
+    #faq .faq-list {
+        margin: 0;
+    }
+
+    #faq .section-title {
+        padding-left: 1rem;
+        margin-bottom: 0;
+    }
+
     .about-content p {
         font-size: 1rem;
         line-height: 1.72;
@@ -2396,6 +2429,14 @@ section {
     border-radius: 999px;
     background: rgba(255, 255, 255, 0.04);
     transition: var(--transition);
+}
+
+.contact-social-link svg {
+    display: block;
+}
+
+.contact-social-link .linkedin-icon {
+    transform: translateX(1px);
 }
 
 .contact-social-link:hover,
