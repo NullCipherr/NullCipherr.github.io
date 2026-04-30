@@ -205,4 +205,4 @@ After pushing, validate:
 
 ## License
 
-Follow the license configured for this repository.
+This project is licensed under the [MIT License](./LICENSE).
